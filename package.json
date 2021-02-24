@@ -1,0 +1,19 @@
+{
+  "name": "pierregatschine_3_24022021",
+  "version": "1.0.0",
+  "description": "projet_3_ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierreGatschine/PierreGatschine_3_24022021.git"
+  },
+  "author": "Pierre_Gatschiné",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierreGatschine/PierreGatschine_3_24022021/issues"
+  },
+  "homepage": "https://github.com/PierreGatschine/PierreGatschine_3_24022021#readme"
+}
