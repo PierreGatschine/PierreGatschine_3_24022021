@@ -1,3 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
+/* @import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions"; */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  /* background: ; */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #040404;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.logo {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 29px;
+  line-height: 42px;
+  color: #040404;
+}
+
+/* @import "./components/buttons"; */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 107px;
+  /* bg-header */
+  background: #FAFAFA;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  width: 160px;
+  height: 42px;
+  flex-grow: 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 29px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #040404;
+}
+
+/* @import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form"; */
+.container {
+  top: 65px;
+}
+
+.search {
+  top: 3rem;
+  width: 100%;
+  height: 19px;
+  /* margin: 0 0 0 17.5px; */
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #040404;
+}
+
+/* @import "./pages/about";
+@import "./pages/project"; */
 
 /*# sourceMappingURL=style.css.map */
