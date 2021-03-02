@@ -30,7 +30,7 @@ body {
 }
 
 .logo {
-  font-family: 'Shrikhand';
+  font-family: 'Shrikhand', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 29px;
@@ -54,13 +54,12 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 107px;
-  /* bg-header */
   background: #FAFAFA;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
+header_logo {
   width: 160px;
   height: 42px;
   -webkit-box-flex: 0;
@@ -75,6 +74,44 @@ header h1 {
   letter-spacing: normal;
   text-align: left;
   color: #040404;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.125rem;
+  background-color: #EAEAEA;
+}
+
+.location em {
+  margin-right: 18px;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* @import "./layout/nav";

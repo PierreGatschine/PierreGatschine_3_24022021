@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 29px;
@@ -43,11 +43,10 @@ header {
   justify-content: center;
   align-items: center;
   padding: 10px 107px;
-  /* bg-header */
   background: #FAFAFA;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
-header h1 {
+header_logo {
   width: 160px;
   height: 42px;
   flex-grow: 0;
@@ -60,6 +59,25 @@ header h1 {
   letter-spacing: normal;
   text-align: left;
   color: #040404;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3.125rem;
+  background-color: #EAEAEA;
+}
+.location em {
+  margin-right: 18px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* @import "./layout/nav";
