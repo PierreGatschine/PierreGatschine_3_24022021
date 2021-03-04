@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
+/* $colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25; */
 /* @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions"; */
@@ -12,6 +19,7 @@
 }
 
 html {
+  /* 10px div by def of 16px */
   font-size: 62.5%;
 }
 
@@ -29,51 +37,50 @@ body {
   line-height: 1.7;
 }
 
-.logo {
+.header__logo, .footer__logo {
   font-family: 'Shrikhand', cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 29px;
+  font-size: 42px;
   line-height: 42px;
   color: #040404;
 }
 
+.footer__logo {
+  font-size: 22px;
+  line-height: 26px;
+  color: #FAFAFA;
+}
+
 /* @import "./components/buttons"; */
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  /* flex-direction: row; */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 107px;
+  padding: 2rem;
   background: #FAFAFA;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
 
-header_logo {
-  width: 160px;
-  height: 42px;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  font-family: 'Shrikhand', cursive;
-  font-size: 29px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #040404;
+.header__logo, .footer__logo {
+  /* width: 160px;
+        height: 42px;
+        flex-grow: 0; */
+  /* font-family: 'Shrikhand', cursive;
+        font-size: 29px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $text-color; */
 }
 
 .location {
@@ -90,12 +97,16 @@ header_logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3.125rem;
+  padding: 2rem;
   background-color: #EAEAEA;
 }
 
-.location em {
-  margin-right: 18px;
+.location__icon {
+  margin-right: 2rem;
+}
+
+.location__text {
+  font-weight: 500;
 }
 
 .hero {
@@ -112,20 +123,51 @@ header_logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  background: #353535;
+}
+
+.footer__list {
+  list-style: none;
+  color: #FAFAFA;
+}
+
+.footer__mention {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+
+.footer__icons {
+  width: 1.2rem;
+  margin-right: 2rem;
 }
 
 /* @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form"; */
 .container {
-  top: 65px;
+  /* top: 65px; */
+  padding: 2rem;
 }
 
+/* 
 .search {
   top: 3rem;
   width: 100%;
   height: 19px;
-  /* margin: 0 0 0 17.5px; */
+  margin: 0 0 0 17.5px;
   font-family: 'Roboto';
   font-size: 16px;
   font-weight: 500;
@@ -134,9 +176,8 @@ header_logo {
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #040404;
-}
-
+  color: $text-color;
+} */
 /* @import "./pages/about";
 @import "./pages/project"; */
 /*# sourceMappingURL=main.css.map */

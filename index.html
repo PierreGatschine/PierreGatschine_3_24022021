@@ -10,22 +10,22 @@
       defer
     ></script>
     <link rel="stylesheet" href="./sass/main.css" />
-    <!-- <link rel="stylesheet" href="./public/css/style.css" /> -->
+    <!--  <link rel="stylesheet" href="./public/css/style.css" />-->
     <title>Ohmyfood!</title>
   </head>
   <body>
-    <header>
-      <h1 class="logo">ohmyfood</h1>
+    <header class="header">
+      <h1 class="header__logo">ohmyfood</h1>
     </header>
 
     <section class="location">
-      <em class="fas fa-map-marker-alt"></em>
-      <span class="search__text">Paris, Belleville</span>
+      <em class="fas fa-map-marker-alt location__icon"></em>
+      <span class="location__text">Paris, Belleville</span>
     </section>
 
     <section class="hero">
       <h2>Réservez le menu qui vous convient</h2>
-      <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+      <p>Découvrez des restaurants d'exception,séléctionnés par nos soins</p>
       <a href="#" class="btn_hero">Explorer nos restaurants</a>
     </section>
 
@@ -49,7 +49,7 @@
       </aside>
 
       <section class="restaurant">
-        <article class="card__grid" onclick="location.href='./html/resto_a_la_francaise.html'">
+        <article class="card-grid" onclick="location.href='./html/resto_a_la_francaise.html'">
             <figure>
               <img src="" alt="" />
               <span class="tag">Nouveau</span>
@@ -99,24 +99,24 @@
       </section>
     </main>
 
-    <footer>
-      <span>ohmyfood</span>
+    <footer class="footer">
+      <span class="footer__logo">ohmyfood</span>
       <ul>
-        <li>
-          <a href="#">
-            <em class="fas fa-utensils"></em>Proposer un restaurant
+        <li class="footer__list">
+          <a class="footer__mention" href="#">
+            <em class="fas fa-utensils footer__icons"></em>Proposer un restaurant
           </a>
         </li>
-        <li>
-          <a href="#">
-            <em class="fas fa-hands-helping"></em>Devenir partenaire
+        <li class="footer__list">
+          <a class="footer__mention" href="#">
+            <em class="fas fa-hands-helping footer__icons"></em>Devenir partenaire
           </a>
         </li>
-        <li>
-          <a href="#">Mentions légales</a>
+        <li class="footer__list">
+          <a class="footer__mention" href="#">Mentions légales</a>
         </li>
-        <li>
-          <a href="mailto:contact@ohmyfood.com">Contact</a>
+        <li class="footer__list">
+          <a class="footer__mention" href="mailto:contact@ohmyfood.com">Contact</a>
         </li>
       </ul>
     </footer>
