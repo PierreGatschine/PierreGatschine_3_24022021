@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
+/* $heading-shadow2:0 10px 6px -6px #777; */
 /* $colour-accent: #D6FFF5;
 $colour-white: #fff;
 $colour-invalid: #DB464B;
@@ -7,7 +8,6 @@ $heading-shadow-size: .55rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25; */
 /* @import "./utils/functions";
-@import "./utils/mixins";
 @import "./utils/extensions"; */
 *,
 *::after,
@@ -46,7 +46,7 @@ body {
 
 .footer__logo {
   font-size: 22px;
-  line-height: 26px;
+  line-height: 40px;
   color: #FAFAFA;
 }
 
@@ -64,23 +64,8 @@ body {
           align-items: center;
   padding: 2rem;
   background: #FAFAFA;
-  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-}
-
-.header__logo, .footer__logo {
-  /* width: 160px;
-        height: 42px;
-        flex-grow: 0; */
-  /* font-family: 'Shrikhand', cursive;
-        font-size: 29px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: left;
-        color: $text-color; */
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.7);
 }
 
 .location {
@@ -106,7 +91,7 @@ body {
 }
 
 .location__text {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero {
@@ -124,7 +109,34 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  width: 100%;
+  height: 290px;
   padding: 2rem;
+  background: #F6F6F6;
+}
+
+.hero__btn {
+  border: 0;
+  /* padding: 0.75rem 1.5rem; */
+  padding: 1rem 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  /* background-color: rgb(104, 104, 104); */
+  background-image: linear-gradient(-5deg, #9256dc 2%, #FF79DA 98%);
+  cursor: pointer;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: #FAFAFA;
+}
+
+.hero__btn:hover {
+  background-color: #FAFAFA;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer {
@@ -147,6 +159,8 @@ body {
 .footer__mention {
   text-decoration: none;
   color: #FAFAFA;
+  /* text-decoration: none;
+        color: $footer-color;*/
 }
 
 .footer__icons {

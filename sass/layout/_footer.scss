@@ -9,9 +9,10 @@
         color: $footer-color;
     }
     &__mention {
-        text-decoration: none;
-        color: $footer-color;
-    }
+        @include a;
+        /* text-decoration: none;
+        color: $footer-color;*/
+    } 
     &__icons {
         width: 1.2rem; 
         margin-right: 2rem;
