@@ -1,0 +1,14 @@
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: $layout-padding;
+    background-color: $location-bg;
+    &__icon {
+        margin-right: 2rem;
+    }
+    &__text {
+        font-weight: 600;
+    }
+}

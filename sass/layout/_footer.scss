@@ -1,0 +1,20 @@
+.footer {
+    
+    display: flex;
+    flex-direction: column;
+    padding: $layout-padding;
+    background: $footer-bg;
+    &__list {
+        list-style: none;
+        color: $footer-color;
+    }
+    &__mention {
+        text-decoration: none;
+        color: $footer-color;
+    }
+    &__icons {
+        width: 1.2rem; 
+        margin-right: 2rem;
+    }
+    
+}
