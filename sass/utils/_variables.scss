@@ -1,3 +1,5 @@
+
+/** Color **/
 $color-primary: #9256dc;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -6,15 +8,20 @@ $bg-color: #FAFAFA;
 $location-bg: #EAEAEA;
 $footer-bg: #353535;
 $footer-color:#FAFAFA;
-$hero-bg:#F6F6F6;
+$bg-grey:#F6F6F6;
 
 $text-color: #040404;
 
+/** Box-shadow **/
 $heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.7);
+$btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 
 /* $heading-shadow2:0 10px 6px -6px #777; */
 
-$layout-padding: 2rem;
+/** Spacing **/
+$layout-padding: 4rem 2rem;
+$location-padding: 2rem;
+
 
 /* $colour-accent: #D6FFF5;
 $colour-white: #fff;

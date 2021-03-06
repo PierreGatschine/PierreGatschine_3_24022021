@@ -7,7 +7,7 @@
     width: 100%;
     height: 290px;
     padding: $layout-padding;
-    background: $hero-bg;
+    background: $bg-grey;
     &__btn {
         @include btn($color-primary, $color-secondary);
         @include a;
