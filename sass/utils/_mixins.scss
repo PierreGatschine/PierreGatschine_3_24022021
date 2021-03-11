@@ -1,0 +1,63 @@
+/* @mixin btn($color1:$color-primary, $color2:$color-secondary) {
+    border: 0;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    background-image: linear-gradient(-5deg, $color1 2%, $color2 98%);
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        background-color: $color-white;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+    }
+}
+ */
+@mixin a {
+    text-decoration: none;
+    color: $color-white;
+}
+
+@mixin ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+    @media (min-width:64rem) {
+        display: flex;
+    }
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+@mixin color-lighten($color1:$color-secondary) {
+    color: lighten($color1, 8%);
+    transition: 2.5s;
+}
+
+@mixin btn($color1:$color-primary, $color2:$color-secondary, $color3:$color-white) {
+    border: 0;
+    padding: 1.5rem 4rem;
+    font-weight: 500;
+    font-size: .9em;
+    color: $color3;
+    border-radius: 100px;
+    background: linear-gradient(-5deg, $color1 2%, $color2 98%);
+    cursor: pointer;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.20);
+    transform: scale(1);
+
+    &:hover {
+        background: linear-gradient(10deg, $color1 1%, $color2 100%);
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+        transition: 2s;
+        transform: scale(1.01);
+    }
+}
