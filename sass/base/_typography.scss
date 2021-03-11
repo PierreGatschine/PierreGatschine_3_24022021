@@ -1,13 +1,66 @@
-
-
 body {
     font-family: 'Roboto', sans-serif;
-    color: $text-color;
-    font-size: 2em;
+    font-size: 1.2rem;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+    @include text-ellipsis;
+
+    &::after {
+        content: "";
+        width: 3.5rem;
+        height: .5rem;
+        background-color: $color-tertiary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+h4 {
+    @include text-ellipsis;
+}
+
+h5 {
+     font-family: 'Roboto',
+     sans-serif;
+     font-size: 1.3rem;
+     font-weight: 300;
+     line-height: 1.5;
+     color: $heart-color;
+     padding: $layout-padding;
+}
+
+p {
+    font-size: .9em;
+    font-weight: 300;
+    @include text-ellipsis;
+}
+
+a {
+    text-decoration: none;
+    color: $footer-color;
+}
+
+
+/* 
 .header__logo {
     font-family: 'Shrikhand', cursive;
     font-size: 42px;
@@ -32,3 +85,4 @@ h2 {
     padding: 2rem 0;
 }
 
+ */

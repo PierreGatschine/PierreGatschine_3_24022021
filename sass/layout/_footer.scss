@@ -1,5 +1,34 @@
+.footer__logo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.375em;
+    line-height: 2.5em;
+    color: $footer-color;
+}
+
 .footer {
-    
+    display: flex;
+    flex-direction: column;
+    padding: $layout-padding;
+    background: $footer-bg;
+
+    &__list {
+        list-style: none;
+
+        &--contact {
+            &:hover {
+                @include color-lighten;
+            }
+        }
+    }
+
+    &__icons {
+        width: 1.1rem;
+        margin-right: 1rem;
+    }
+
+}
+
+/* .footer {
     display: flex;
     flex-direction: column;
     padding: $layout-padding;
@@ -10,12 +39,10 @@
     }
     &__mention {
         @include a;
-        /* text-decoration: none;
-        color: $footer-color;*/
     } 
     &__icons {
         width: 1.2rem; 
         margin-right: 2rem;
     }
     
-}
+} */

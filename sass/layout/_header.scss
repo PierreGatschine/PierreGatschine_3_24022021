@@ -1,9 +1,57 @@
 .header {
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: $header-padding;
+    background: $color-white;
+    box-shadow: $heading-shadow;
+    position: relative;
+
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        color: $text-color;
+        display: block;
+    }
+
+    &__arrow {
+        position: absolute;
+        left: 1rem;
+        top: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: $text-color;
+    }
+
+    @media (max-width:400px) {
+        &__arrow {
+            font-size: 1.1rem;
+            transition: 2s;
+        }
+    }
+
+}
+
+/* 
+.header {
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: $layout-padding;
-    background: $bg-color;
+    background: $color-white;
     box-shadow: $heading-shadow;
 }
+
+.header__logo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5rem;
+    line-height: 2.625;
+    color: $text-color;
+}
+
+ */

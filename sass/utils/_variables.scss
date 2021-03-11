@@ -1,32 +1,34 @@
 
 /** Color **/
 $color-primary: #9256dc;
-$color-secondary: #FF79DA;
+$color-secondary: #ff7ad9;
 $color-tertiary: #99E2D0;
+$color-white: #FFFFFF;
+$bg-grey: #F6F6F6;
+$grad: linear-gradient(#e76ce7, #a37cfd);
 
-$bg-color: #FAFAFA;
+/** Elements **/
+$text-color: #040404;
+$heart-color: #404040;
+
+/** Layout **/
 $location-bg: #EAEAEA;
 $footer-bg: #353535;
 $footer-color:#FAFAFA;
-$bg-grey:#F6F6F6;
+$resto-bg:#F6F6F6;
 
-$text-color: #040404;
 
 /** Box-shadow **/
 $heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.7);
 $btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+$card-shadow: 2px 4px 8px 3px rgb(228, 228, 231);
 
-/* $heading-shadow2:0 10px 6px -6px #777; */
 
 /** Spacing **/
-$layout-padding: 4rem 2rem;
+$header-padding: 2rem;
+$layout-padding: 2rem 2rem 4rem 2rem;
+$layout-page-menu-padding: 4rem 2rem;
 $location-padding: 2rem;
 
 
-/* $colour-accent: #D6FFF5;
-$colour-white: #fff;
-$colour-invalid: #DB464B;
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25; */

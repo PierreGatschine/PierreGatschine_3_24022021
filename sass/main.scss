@@ -9,7 +9,7 @@
 @import "./base/base";
 @import "./base/typography";
 
-/* @import "./components/buttons"; */
+@import "./components/btn";
 
 @import "./layout/header";
 @import "./layout/location";
@@ -18,12 +18,5 @@
 @import "./layout/operation";
 @import "./layout/restaurant";
 
-
-/* @import "./layout/nav";
-@import "./layout/container";
-@import "./layout/form"; */
-
-
 @import "./pages/home_page";
-/* @import "./pages/about";
-@import "./pages/project"; */
+@import "./pages/a_la_francaise";
