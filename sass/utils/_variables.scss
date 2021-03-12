@@ -8,9 +8,10 @@ $bg-grey: #F6F6F6;
 $grad: linear-gradient(#e76ce7, #a37cfd);
 
 /** Elements **/
+$header-color:#101010;
 $text-color: #040404;
 $heart-color: #404040;
-
+$location-color:#353535;
 /** Layout **/
 $location-bg: #EAEAEA;
 $footer-bg: #353535;
@@ -19,7 +20,7 @@ $resto-bg:#F6F6F6;
 
 
 /** Box-shadow **/
-$heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.7);
+$heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.5);
 $btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 $card-shadow: 2px 4px 8px 3px rgb(228, 228, 231);
 

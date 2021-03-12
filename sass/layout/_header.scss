@@ -1,21 +1,18 @@
 .header {
-    display: flex;
-    flex-direction: row;
+    display: flex; 
     justify-content: center;
     align-items: center;
     padding: $header-padding;
     background: $color-white;
-    box-shadow: $heading-shadow;
+    box-shadow: $btn-shadow; 
     position: relative;
-
     &__logo {
         font-family: 'Shrikhand', cursive;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-        color: $text-color;
+        font-size: 2.5rem; 
+        line-height: 2rem;
+        color: $header-color;
         display: block;
     }
-
     &__arrow {
         position: absolute;
         left: 1rem;
@@ -27,7 +24,6 @@
         font-size: 2rem;
         color: $text-color;
     }
-
     @media (max-width:400px) {
         &__arrow {
             font-size: 1.1rem;
@@ -36,22 +32,3 @@
     }
 
 }
-
-/* 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: $layout-padding;
-    background: $color-white;
-    box-shadow: $heading-shadow;
-}
-
-.header__logo {
-    font-family: 'Shrikhand', cursive;
-    font-size: 2.5rem;
-    line-height: 2.625;
-    color: $text-color;
-}
-
- */

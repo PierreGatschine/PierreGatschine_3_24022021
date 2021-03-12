@@ -1,80 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
 
-/** Color **/
-$color-primary: #9256dc;
-$color-secondary: #ff7ad9;
-$color-tertiary: #99E2D0;
-$color-white: #FFFFFF;
-
-$grad: linear-gradient(#e76ce7, #a37cfd);
-
-/** Elements **/
-$text-color: #040404;
-$heart-color: #404040;
-
-/** Layout **/
-$location-bg: #EAEAEA;
-$footer-bg: #353535;
-$footer-color:#FAFAFA;
-$resto-bg:#F6F6F6;
-
-$heart-color: #404040;
-
-$text-color: #040404;
-
-
-/** Box-shadow **/
-$heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.7);
-$btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-$card-shadow: 2px 4px 8px 3px #e4e4e7;
-
-/** Spacing **/
-$header-padding: 2rem;
-$layout-padding: 4rem 2rem;
-$location-padding: 2rem;
-
-
-
-/** Mixins**/
-@mixin text-ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-@mixin color-lighten($color1:$color-secondary) {
-    color: lighten($color1, 8%);
-    transition: 2.5s;
-}
-
-@mixin btn($color1:$color-primary, $color2:$color-secondary, $color3:$color-white) {
-    border: 0;
-    padding: 1.5rem 4rem;
-    font-weight: 500;
-    font-size: .9em;
-    color: $color3;
-    border-radius: 100px;
-    background: linear-gradient(-5deg, $color1 2%, $color2 98%);
-    cursor: pointer;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.20);
-    transform: scale(1);
-
-    &:hover {
-        background: linear-gradient(10deg, $color1 1%, $color2 100%);
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-        transition: 2s;
-        transform: scale(1.01);
-    }
-}
-
+/* 
 .header__logo {
     font-family: 'Shrikhand', cursive;
     font-size: 2.5rem;
     line-height: 2.625;
     color: $text-color;
 }
-
-.footer__logo {
+ */
+/* .footer__logo {
     font-family: 'Shrikhand', cursive;
     font-size: 1.375em;
     line-height: 2.5em;
@@ -95,13 +28,6 @@ $location-padding: 2rem;
     font-size: 1rem;
     box-sizing: border-box;
 }
-
-/* 
-html {
-    /* 10px div by def of 16px */
-/* font-size: 62.5%;
-}
- */
 
 body {
     width: 100%;
@@ -156,7 +82,7 @@ a {
     text-decoration: none;
     color: $footer-color;
 }
-
+ 
 .header {
     display: flex;
     flex-direction: row;
@@ -195,7 +121,7 @@ a {
     }
 
 }
-
+*/
 .hero {
     img {
         max-width: 100%;
