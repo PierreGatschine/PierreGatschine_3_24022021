@@ -1,0 +1,226 @@
+.hero__page_menu{
+    &--img { 
+       /*  max-width: 100%;
+        max-height: 30rem;
+        width: 100%;
+        object-fit: cover; */
+        height: 50vh;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        vertical-align: top;
+    }
+}
+
+.resto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-top: -6rem;
+    padding-right: 0.3rem;
+    border-radius: 4rem 4rem 0 0;
+    background: $resto-bg;
+    z-index: 1;
+    position: relative;
+    padding: $layout-padding;
+    display: block;
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3.5rem;
+
+        &--title {
+            font-family: 'Shrikhand', cursive;
+            @include text-ellipsis;
+            padding-right: 1.5rem;
+        }
+
+        &--btn {
+            border: transparent 0px solid;
+            padding: 1rem;
+            /* display: flex 1 0; */
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            background: $footer-bg;
+        }
+
+        &--like {
+            /* transition-duration: .25s; */
+            background: $resto-bg;
+            color: $heart-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-right: 2.5rem;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+
+            &:hover {
+                font-weight: bold;
+                @include color-lighten;
+                /* transition: 2.5s; */
+            }
+        }
+    }
+}
+
+.menu__starter,
+.menu__middle {
+    margin-bottom: 3.5rem;
+}
+
+.menu__starter {
+    animation: appearance 800ms both ease-in-out;
+}
+
+.menu__middle {
+    animation: appearance 800ms 400ms both ease-in-out;
+}
+
+.menu__finish {
+    animation: appearance 800ms 800ms both ease-in-out;
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.menu__choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    background: $color-white;
+    position: relative;
+    box-shadow: $card-shadow;
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+    padding: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    &--title {
+        /* flex-basis: content; */
+        flex-shrink: 5;
+
+        @include text-ellipsis;
+    }
+
+    &--price {
+        flex-grow: 1;
+        margin: 0;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 3rem;
+        @include text-ellipsis;
+    }
+
+    &--selected {
+        background-color: $color-tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+    }
+
+    &:hover &--selected {
+        margin-right: -1rem;
+    }
+
+    &--transform {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+
+    }
+
+    &:hover &--transform {
+        transform: rotate(0);
+    }
+
+    &--checked {
+        color: $color-tertiary;
+    }
+
+}
+
+.menu__choice:hover {
+    cursor: pointer;
+
+    &--price {
+        transform: translateX(-70px);
+    }
+
+    &--selected {
+        /* opacity: 1; */
+        transform: scaleX(1);
+
+    }
+
+    &--transform {
+        transform: rotate(360deg);
+    }
+}
+
+.wrapper__btn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+
+    &--order {
+        @include btn;
+        cursor: pointer;
+    }
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: $layout-padding;
+    background: $footer-bg;
+
+    &__list {
+        list-style: none;
+
+        &--contact {
+            &:hover {
+                @include color-lighten;
+            }
+        }
+    }
+
+    &__icons {
+        width: 1.1rem;
+        margin-right: 1rem;
+    }
+
+}

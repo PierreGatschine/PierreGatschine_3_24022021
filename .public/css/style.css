@@ -331,6 +331,7 @@ a {
   border-radius: 1rem;
   box-shadow: 2px 4px 8px 3px #e4e4e7;
   position: relative;
+  background: #FFFFFF;
   cursor: pointer;
 }
 .figure__card--img {
@@ -338,8 +339,6 @@ a {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
-  /* vertical-align: bottom; */
-  /* object-position: 20% 60%; */
   position: relative;
 }
 .figure__card span {
@@ -378,7 +377,7 @@ a {
   justify-content: end;
   cursor: pointer;
   position: relative;
-  background-color: black;
+  background: #101010;
 }
 .figcaption__card--btn:hover::before {
   opacity: 1;
@@ -396,7 +395,8 @@ a {
 }
 .figcaption__card--icon {
   transition: 0.25s;
-  background: #f6f6f6;
+  background: #FFFFFF;
+  color: #404040;
   position: absolute;
   top: 0;
   left: 0;

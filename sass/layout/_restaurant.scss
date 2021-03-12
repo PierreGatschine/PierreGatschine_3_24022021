@@ -1,10 +1,9 @@
 .restaurant {
-
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-gap: 2rem;
-    padding: 2rem 2rem 4rem 2rem;
+    padding: $layout-padding;
     background: $bg-grey;
 }
 
@@ -12,20 +11,19 @@
     border-radius: 1rem;
     box-shadow: $card-shadow;
     position: relative;
+    background: $color-white;
     cursor: pointer;
     &--img {
         height: 12.5rem;
         width: 100%;
         border-radius: 1rem 1rem 0 0;
         object-fit: cover;
-        /* vertical-align: bottom; */
-        /* object-position: 20% 60%; */
         position: relative;
     }
 
     span {
-        background: #99E2D0;
-        color: #377E56;
+        background: $span-new-bg;
+        color: $span-new-color;
         font-weight: 700;
         padding: .5rem 1.5rem;
         border-radius: 0.125rem;
@@ -61,7 +59,7 @@
         justify-content: end;
         cursor: pointer;
         position: relative;
-        background-color: black;
+        background: $header-color;
 
         &:hover::before {
             opacity: 1;
@@ -76,13 +74,14 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+            background: $linear-gradient;
         }
     }
 
     &--icon {
         transition: .25s;
-        background: #f6f6f6;
+        background: $color-white;
+        color: $heart-color;
         position: absolute;
         top: 0;
         left: 0;
@@ -92,6 +91,7 @@
         align-items: center;
         justify-content: center;
         mix-blend-mode: lighten;
+        
     }
 }
 

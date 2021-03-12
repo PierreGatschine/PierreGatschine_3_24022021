@@ -268,6 +268,7 @@ a {
 
 .footer__list--contact:hover {
   color: #ffa3e5;
+  mix-blend-mode: lighten;
   -webkit-transition: 2.5s;
   transition: 2.5s;
 }
@@ -430,6 +431,7 @@ a {
   -webkit-box-shadow: 2px 4px 8px 3px #e4e4e7;
           box-shadow: 2px 4px 8px 3px #e4e4e7;
   position: relative;
+  background: #FFFFFF;
   cursor: pointer;
 }
 
@@ -439,8 +441,6 @@ a {
   border-radius: 1rem 1rem 0 0;
   -o-object-fit: cover;
      object-fit: cover;
-  /* vertical-align: bottom; */
-  /* object-position: 20% 60%; */
   position: relative;
 }
 
@@ -503,7 +503,7 @@ a {
           justify-content: end;
   cursor: pointer;
   position: relative;
-  background-color: black;
+  background: #101010;
 }
 
 .figcaption__card--btn:hover::before {
@@ -527,7 +527,8 @@ a {
 .figcaption__card--icon {
   -webkit-transition: .25s;
   transition: .25s;
-  background: #f6f6f6;
+  background: #FFFFFF;
+  color: #404040;
   position: absolute;
   top: 0;
   left: 0;
@@ -647,6 +648,7 @@ a {
 .resto__menu--like:hover {
   font-weight: bold;
   color: #ffa3e5;
+  mix-blend-mode: lighten;
   -webkit-transition: 2.5s;
   transition: 2.5s;
   /* transition: 2.5s; */
@@ -877,6 +879,7 @@ a {
 
 .footer__list--contact:hover {
   color: #ffa3e5;
+  mix-blend-mode: lighten;
   -webkit-transition: 2.5s;
   transition: 2.5s;
 }

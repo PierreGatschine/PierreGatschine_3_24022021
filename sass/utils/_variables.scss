@@ -6,12 +6,15 @@ $color-tertiary: #99E2D0;
 $color-white: #FFFFFF;
 $bg-grey: #F6F6F6;
 $grad: linear-gradient(#e76ce7, #a37cfd);
-
+$linear-gradient: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
 /** Elements **/
 $header-color:#101010;
 $text-color: #040404;
 $heart-color: #404040;
 $location-color:#353535;
+$span-new-bg: #99E2D0;
+$span-new-color: #377E56;
+
 /** Layout **/
 $location-bg: #EAEAEA;
 $footer-bg: #353535;

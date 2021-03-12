@@ -21,7 +21,7 @@
 
 
 @mixin color-lighten($color1:$color-secondary) {
-    color: lighten($color1, 8%);
+    color: lighten($color1, 8);
     transition: 2.5s;
 }
 
