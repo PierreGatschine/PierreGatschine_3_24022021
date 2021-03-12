@@ -341,6 +341,7 @@ a {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
+  /* vertical-align: bottom; */
   /* object-position: 20% 60%; */
   position: relative;
 }
@@ -419,134 +420,16 @@ a {
     grid-column: span 2;
   }
 }
-/* 
-.header__logo {
-    font-family: 'Shrikhand', cursive;
-    font-size: 2.5rem;
-    line-height: 2.625;
-    color: $text-color;
-}
- */
-/* .footer__logo {
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.375em;
-    line-height: 2.5em;
-    color: $footer-color;
-}
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-:root {
-    font-family: 'Roboto',
-        sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    min-width: 350px;
-    max-width: 1440px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5;
-    box-sizing: border-box;
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-    color: $text-color;
-    font-size: 1.5em;
-    font-weight: 600;
-    margin: 0;
-    padding: 2rem 0;
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 0.5rem;
-    font-weight: normal;
-    margin-bottom: 1.5rem;
-    @include text-ellipsis;
-
-    &::after {
-        content: "";
-        width: 3.5rem;
-        height: .5rem;
-        background-color: $color-tertiary;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-}
-
-h4 {
-    @include text-ellipsis;
-}
-
-p {
-    font-size: .9em;
-    font-weight: 300;
-    @include text-ellipsis;
-}
-
-a {
-    text-decoration: none;
-    color: $footer-color;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: $header-padding;
-    background: $color-white;
-    box-shadow: $heading-shadow;
-    position: relative;
-
-    &__logo {
-        font-family: 'Shrikhand', cursive;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-        color: $text-color;
-        display: block;
-    }
-
-    &__arrow {
-        position: absolute;
-        left: 1rem;
-        top: 45%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        color: $text-color;
-    }
-
-    @media (max-width:400px) {
-        &__arrow {
-            font-size: 1.1rem;
-            transition: 2s;
-        }
-    }
-
-}
-*/
-.hero img {
-  max-width: 100%;
-  max-height: 60rem;
+.hero__page_menu--img {
+  /*  max-width: 100%;
+   max-height: 30rem;
+   width: 100%;
+   object-fit: cover; */
+  height: 50vh;
   width: 100%;
+  max-width: 100%;
   object-fit: cover;
+  vertical-align: top;
 }
 
 .resto {
