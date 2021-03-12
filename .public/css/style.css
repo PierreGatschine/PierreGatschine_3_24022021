@@ -114,6 +114,7 @@ a {
   transform: scale(1.01);
 }
 
+/** @format */
 .header {
   display: flex;
   justify-content: center;
@@ -195,13 +196,6 @@ a {
   transform: scale(1.01);
 }
 
-.footer__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.375em;
-  line-height: 2.5em;
-  color: #FAFAFA;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -220,21 +214,34 @@ a {
   margin-right: 1rem;
 }
 
-/* .footer {
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.375rem;
+  padding-bottom: 1.5rem;
+  line-height: 1.7rem;
+  color: #FAFAFA;
+}
+
+/* 
+.footer {
     display: flex;
     flex-direction: column;
     padding: $layout-padding;
     background: $footer-bg;
+
     &__list {
         list-style: none;
-        color: $footer-color;
+
+        &--contact {
+            &:hover {
+                @include color-lighten;
+            }
+        }
     }
-    &__mention {
-        @include a;
-    } 
+
     &__icons {
-        width: 1.2rem; 
-        margin-right: 2rem;
+        width: 1.1rem;
+        margin-right: 1rem;
     }
 
 } */
@@ -281,6 +288,9 @@ a {
 }
 .operation__step--text {
   flex-grow: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media (min-width: 64rem) {
   .operation__step {
@@ -324,13 +334,14 @@ a {
   border-radius: 1rem;
   box-shadow: 2px 4px 8px 3px #e4e4e7;
   position: relative;
+  cursor: pointer;
 }
 .figure__card--img {
   height: 12.5rem;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
-  object-position: 20% 60%;
+  /* object-position: 20% 60%; */
   position: relative;
 }
 .figure__card span {

@@ -24,6 +24,7 @@
         }
         &--text {
             flex-grow: 2;
+            @include text-ellipsis;
         }
         @media (min-width:64rem) {
             flex: 1;

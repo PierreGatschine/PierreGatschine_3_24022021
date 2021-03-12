@@ -12,13 +12,13 @@
     border-radius: 1rem;
     box-shadow: $card-shadow;
     position: relative;
-
+    cursor: pointer;
     &--img {
         height: 12.5rem;
         width: 100%;
         border-radius: 1rem 1rem 0 0;
         object-fit: cover;
-        object-position: 20% 60%;
+        /* object-position: 20% 60%; */
         position: relative;
     }
 

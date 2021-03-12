@@ -1,10 +1,3 @@
-.footer__logo {
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.375em;
-    line-height: 2.5em;
-    color: $footer-color;
-}
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -25,21 +18,34 @@
     }
 }
 
-/* .footer {
+.footer__logo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.375rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.7rem;
+    color: $footer-color;
+}
+
+/* 
+.footer {
     display: flex;
     flex-direction: column;
     padding: $layout-padding;
     background: $footer-bg;
+
     &__list {
         list-style: none;
-        color: $footer-color;
+
+        &--contact {
+            &:hover {
+                @include color-lighten;
+            }
+        }
     }
-    &__mention {
-        @include a;
-    } 
+
     &__icons {
-        width: 1.2rem; 
-        margin-right: 2rem;
+        width: 1.1rem;
+        margin-right: 1rem;
     }
-    
+
 } */
