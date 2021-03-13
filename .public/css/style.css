@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
-/** Color **/
+/** Colors **/
 /** Elements **/
-/** Layout **/
+/** Layouts **/
+/** measuring scale **/
 /** Box-shadow **/
 /** Spacing **/
 /* @import "./utils/functions";
 @import "./utils/extensions"; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
 *,
 *::after,
 *::before {
@@ -15,39 +17,33 @@
 }
 
 :root {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
   min-width: 350px;
-  /* max-width: 1440px; */
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  /* box-sizing: border-box;*/
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
-  color: #040404;
-  font-size: 1.5em;
+  color: #000000;
+  font-size: 2rem;
   font-weight: 600;
   margin: 0;
   padding: 2rem 0;
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
@@ -74,7 +70,6 @@ h4 {
 }
 
 h5 {
-  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.5;
@@ -83,7 +78,7 @@ h5 {
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 1rem;
   font-weight: 300;
   overflow: hidden;
   white-space: nowrap;
@@ -93,6 +88,21 @@ p {
 a {
   text-decoration: none;
   color: #FAFAFA;
+}
+
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  color: #101010;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  color: #FFFFFF;
+  font-size: 1.375rem;
+  line-height: 1.7rem;
+  padding-bottom: 1.5rem;
 }
 
 .btn {
@@ -124,23 +134,13 @@ a {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   position: relative;
 }
-.header__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 2.5rem;
-  line-height: 2rem;
-  color: #101010;
-  display: block;
-}
 .header__arrow {
   position: absolute;
   left: 1rem;
   top: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transform: translateY(-50%);
   font-size: 2rem;
-  color: #040404;
+  color: #000000;
 }
 @media (max-width: 400px) {
   .header__arrow {
@@ -162,7 +162,7 @@ a {
   margin-right: 2rem;
 }
 .location__text {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .hero {
@@ -196,10 +196,10 @@ a {
   transform: scale(1.01);
 }
 
+/** @format */
 .footer {
   display: flex;
   flex-direction: column;
-  /* padding: 2rem; */
   background: #353535;
 }
 .footer__list {
@@ -214,37 +214,6 @@ a {
   margin-right: 1rem;
 }
 
-.footer__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.375rem;
-  padding-bottom: 1.5rem;
-  line-height: 1.7rem;
-  color: #FAFAFA;
-}
-
-/* 
-.footer {
-    display: flex;
-    flex-direction: column;
-    padding: $layout-padding;
-    background: $footer-bg;
-
-    &__list {
-        list-style: none;
-
-        &--contact {
-            &:hover {
-                @include color-lighten;
-            }
-        }
-    }
-
-    &__icons {
-        width: 1.1rem;
-        margin-right: 1rem;
-    }
-
-} */
 .operation {
   display: grid;
   grid-column: 1fr;

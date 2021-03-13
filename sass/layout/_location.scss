@@ -7,9 +7,9 @@
     background: $location-bg;
     color: $location-color;
     &__icon {
-        margin-right: 2rem;
+        margin-right: $size * 2;
     }
     &__text {
-        font-weight: 600;
+        font-weight: 500;
     }
 }

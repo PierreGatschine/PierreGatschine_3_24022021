@@ -1,26 +1,28 @@
 
-/** Color **/
+/** Colors **/
 $color-primary: #9256dc;
 $color-secondary: #ff7ad9;
 $color-tertiary: #99E2D0;
 $color-white: #FFFFFF;
 $bg-grey: #F6F6F6;
-$grad: linear-gradient(#e76ce7, #a37cfd);
 $linear-gradient: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+
 /** Elements **/
 $header-color:#101010;
-$text-color: #040404;
+$text-color: #000000;
 $heart-color: #404040;
 $location-color:#353535;
 $span-new-bg: #99E2D0;
 $span-new-color: #377E56;
 
-/** Layout **/
+/** Layouts **/
 $location-bg: #EAEAEA;
 $footer-bg: #353535;
 $footer-color:#FAFAFA;
 $resto-bg:#F6F6F6;
 
+/** measuring scale **/
+$size: 1rem;
 
 /** Box-shadow **/
 $heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.5);

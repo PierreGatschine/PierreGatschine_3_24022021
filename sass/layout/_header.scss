@@ -8,27 +8,17 @@
   background: $color-white;
   box-shadow: $btn-shadow;
   position: relative;
-  &__logo {
-    font-family: "Shrikhand", cursive;
-    font-size: 2.5rem;
-    line-height: 2rem;
-    color: $header-color;
-    display: block;
-  }
   &__arrow {
     position: absolute;
-    left: 1rem;
+    left: $size;
     top: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: $size * 2;
     color: $text-color;
   }
   @media (max-width: 400px) {
     &__arrow {
-      font-size: 1.1rem;
+      font-size: $size * 1.1;
       transition: 2s;
     }
   }
