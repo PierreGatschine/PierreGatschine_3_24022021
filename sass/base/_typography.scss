@@ -78,3 +78,16 @@ a {
     padding-bottom: $size * 1.5;
 }
 
+@mixin padding ($pb:#{$size*1}, $pr:#{$size*1}, $pb:#{$size*1}, $pl:#{$size*1}) {
+    padding-top: $pb;
+    padding-right: $pr;
+    padding-bottom: $pb;
+    padding-left: $pl;
+}
+
+@mixin margin ($pb:#{$size*1}, $pr:#{$size*1}, $pb:#{$size*1}, $pl:#{$size*1}) {
+    padding-top: $pb;
+    padding-right: $pr;
+    padding-bottom: $pb;
+    padding-left: $pl;
+}
