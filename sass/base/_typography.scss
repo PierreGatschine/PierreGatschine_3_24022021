@@ -17,22 +17,22 @@ h2 {
     font-size: $size * 2;
     font-weight: 600;
     margin: 0;
-    padding: $size * 2 0;
+    padding: map-get($sizing, regular);
 }
 
 h3 {
     text-transform: uppercase;
     position: relative;
-    padding-bottom: $size * .5;
-    font-weight: normal;
-    margin-bottom: $size * 1.5;
+    padding-bottom: map-get($sizing, low) * .5;
+    font-weight: 400;
+    margin-bottom: map-get($sizing, low) * 1.5;
     @include text-ellipsis;
 
     &::after {
         content: "";
         width: $size * 3.5;
         height: $size * .5;
-        background-color: $color-tertiary;
+        background: $color-tertiary;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -48,7 +48,7 @@ h5 {
      font-weight: 300;
      line-height: 1.5;
      color: $heart-color;
-     padding: $layout-padding;
+     padding: map-get($sizing, regular);
 }
 
 p {
@@ -75,19 +75,6 @@ a {
 
 .footer__logo {
     @include logo($color:$color-white,$fz:#{$size*1.375}, $lh:#{$size*1.7});
-    padding-bottom: $size * 1.5;
+    padding-bottom: map-get($sizing, low) * 1.5;
 }
 
-@mixin padding ($pb:#{$size*1}, $pr:#{$size*1}, $pb:#{$size*1}, $pl:#{$size*1}) {
-    padding-top: $pb;
-    padding-right: $pr;
-    padding-bottom: $pb;
-    padding-left: $pl;
-}
-
-@mixin margin ($pb:#{$size*1}, $pr:#{$size*1}, $pb:#{$size*1}, $pl:#{$size*1}) {
-    padding-top: $pb;
-    padding-right: $pr;
-    padding-bottom: $pb;
-    padding-left: $pl;
-}

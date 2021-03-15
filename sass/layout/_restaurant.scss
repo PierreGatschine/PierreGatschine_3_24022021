@@ -1,107 +1,107 @@
+/** @format */
+
 .restaurant {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 2rem;
-    padding: $layout-padding;
-    background: $bg-grey;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: $size * 2;
+  @include padding-layout;
+  background: $bg-grey;
 }
 
 .figure__card {
-    border-radius: 1rem;
-    box-shadow: $card-shadow;
+  border-radius: 1rem;
+  box-shadow: $card-shadow;
+  position: relative;
+  background: $color-white;
+  cursor: pointer;
+  &--img {
+    height: 12.5rem;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
     position: relative;
-    background: $color-white;
-    cursor: pointer;
-    &--img {
-        height: 12.5rem;
-        width: 100%;
-        border-radius: 1rem 1rem 0 0;
-        object-fit: cover;
-        position: relative;
-    }
+  }
 
-    span {
-        background: $span-new-bg;
-        color: $span-new-color;
-        font-weight: 700;
-        padding: .5rem 1.5rem;
-        border-radius: 0.125rem;
-        position: absolute;
-        top: 1.5rem;
-        right: 1rem;
-    }
+  span {
+    background: $span-new-bg;
+    color: $span-new-color;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+  }
 }
 
 .figcaption__card {
-    padding: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &--text {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    position: relative;
+  }
+
+  &--btn {
+    height: 4rem;
+    width: 4rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 2rem;
+    display: flex;
     align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    position: relative;
+    background: $header-color;
 
-    &--text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 1rem;
-        position: relative;
+    &:hover::before {
+      opacity: 1;
     }
 
-    &--btn {
-        height: 4rem;
-        width: 4rem;
-        background-color: transparent;
-        border: transparent 0px solid;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        cursor: pointer;
-        position: relative;
-        background: $header-color;
-
-        &:hover::before {
-            opacity: 1;
-        }
-
-        &::before {
-            opacity: 0;
-            transition: 0.5s;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: $linear-gradient;
-        }
+    &::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $linear-gradient;
     }
+  }
 
-    &--icon {
-        transition: .25s;
-        background: $color-white;
-        color: $heart-color;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        mix-blend-mode: lighten;
-        
-    }
+  &--icon {
+    transition: 0.25s;
+    background: $color-white;
+    color: $heart-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+  }
 }
 
-
 @media (min-width: 750px) {
-    .restaurant {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .restaurant {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .restaurant__title {
-        grid-column: span 2;
-    }
+  .restaurant__title {
+    grid-column: span 2;
+  }
 }

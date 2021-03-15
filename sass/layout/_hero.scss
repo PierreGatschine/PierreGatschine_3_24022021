@@ -5,7 +5,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: $layout-padding;
+    @include padding-layout;
     background: $bg-grey;
     &__btn {
         @include btn($color-primary, $color-secondary);

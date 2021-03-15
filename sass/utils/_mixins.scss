@@ -1,46 +1,66 @@
+/** @format */
+
 @mixin a {
-    text-decoration: none;
-    color: $color-white;
+  text-decoration: none;
+  color: $color-white;
 }
 
 @mixin ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: compteListe;
-    @media (min-width:64rem) {
-        display: flex;
-    }
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+  @media (min-width: 64rem) {
+    display: flex;
+  }
 }
 
 @mixin text-ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin color-lighten($color1: $color-secondary) {
+  color: lighten($color1, 8);
+  transition: 2.5s;
+}
+
+@mixin btn(
+  $color1: $color-primary,
+  $color2: $color-secondary,
+  $color3: $color-white
+) {
+  border: 0;
+  padding: 1.5rem 4rem;
+  font-weight: 500;
+  font-size: 0.9em;
+  color: $color3;
+  border-radius: 100px;
+  background: linear-gradient(-5deg, $color1 2%, $color2 98%);
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+
+  &:hover {
+    background: linear-gradient(10deg, $color1 1%, $color2 100%);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    transition: 2s;
+    transform: scale(1.01);
+  }
+}
+
+@mixin padding-layout {
+    padding: map-get($sizing, regular);
+    padding-bottom: map-get($sizing, high);
+}
+
+@mixin step-layout {
+     padding-top: map-get($sizing, regular);
+     padding-right: map-get($sizing, high);
+     padding-bottom: map-get($sizing, regular);
+     padding-left: map-get($sizing, high);
+    
 }
 
 
-@mixin color-lighten($color1:$color-secondary) {
-    color: lighten($color1, 8);
-    transition: 2.5s;
-}
-
-@mixin btn($color1:$color-primary, $color2:$color-secondary, $color3:$color-white) {
-    border: 0;
-    padding: 1.5rem 4rem;
-    font-weight: 500;
-    font-size: .9em;
-    color: $color3;
-    border-radius: 100px;
-    background: linear-gradient(-5deg, $color1 2%, $color2 98%);
-    cursor: pointer;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.20);
-    transform: scale(1);
-
-    &:hover {
-        background: linear-gradient(10deg, $color1 1%, $color2 100%);
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-        transition: 2s;
-        transform: scale(1.01);
-    }
-}

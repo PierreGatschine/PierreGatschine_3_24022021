@@ -1,65 +1,55 @@
+/** @format */
+
 .operation {
-    display: grid;
-    grid-column: 1fr;
-    grid-row: repeat(auto, 1fr);
-    padding: $layout-padding;
-    &__steps {
-        @include ol;
+  display: grid;
+  grid-column: 1fr;
+  grid-row: repeat(auto, 1fr);
+  @include padding-layout;
+  &__steps {
+    @include ol;
+  }
+  &__step {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: space-around;
+    @include step-layout;
+    /* padding: 2rem 4rem; */
+    margin: 1rem 0 2rem 0.75rem;
+    box-shadow: $btn-shadow;
+    border-radius: $size * 1.25;
+    background: $bg-grey;
+    position: relative;
+    &--icon {
+      padding-right: map-get($sizing, low);
+      flex-grow: 1;
+      color: $heart-color;
     }
-    &__step {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        align-content: space-around;
-        padding: 2rem 4rem;
-        margin: 1rem 0 2rem 0.75rem;
-        box-shadow: $btn-shadow;
-        border-radius: 1.25rem;
-        background: $bg-grey;
-        position: relative;
-        &--icon {
-            padding-right: 1rem;
-            flex-grow: 1;
-            color: $heart-color;
-        }
-        &--text {
-            flex-grow: 2;
-        }
-        @media (min-width:64rem) {
-            flex: 1;
-            margin: 0;
-            margin-left: 2rem;
-
-           /*  &:first-child {
-                margin-left: 0.75rem;
-            } */
-        }
-
-       /*  &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }  */
-
-        &::before {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            counter-increment: compteListe 1;
-            content: counter(compteListe) " ";
-            background: $color-primary;
-            height: 2.2rem;
-            width: 2.2rem;
-            border-radius: 100%;
-            color: white;
-            position: absolute;
-            left: -0.75rem;
-        }
-        &:hover {
-            background: transparentize($color-primary, 0.85);
-            cursor: pointer;
-        }
+    &--text {
+      flex-grow: 2;
     }
+    @media (min-width: 1024px) {
+      flex: 1;
+      margin: 0;
+      margin-left: map-get($sizing, regular);
+    }
+    &::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      counter-increment: compteListe 1;
+      content: counter(compteListe) " ";
+      background: $color-primary;
+      height: $size * 2.2;
+      width: $size * 2.2;
+      border-radius: 100%;
+      color: $color-white;
+      position: absolute;
+      left: $size * -0.75;
+    }
+    &:hover {
+      background: transparentize($color-primary, 0.85);
+      cursor: pointer;
+    }
+  }
 }

@@ -201,26 +201,3 @@
     }
 
 }
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    padding: $layout-padding;
-    background: $footer-bg;
-
-    &__list {
-        list-style: none;
-
-        &--contact {
-            &:hover {
-                @include color-lighten;
-            }
-        }
-    }
-
-    &__icons {
-        width: 1.1rem;
-        margin-right: 1rem;
-    }
-
-}

@@ -3,6 +3,7 @@
 .footer {
   display: flex;
   flex-direction: column;
+  padding: map-get($sizing, regular);
   background: $footer-bg;
 
   &__list {
@@ -15,6 +16,7 @@
   }
   &__icons {
     width: $size * 1.1;
-    margin-right: $size;
+    margin-right: map-get($sizing, low) * 1.5;
   }
 }
+

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $header-padding;
+  padding: map-get($sizing, regular);
   background: $color-white;
   box-shadow: $btn-shadow;
   position: relative;
