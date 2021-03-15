@@ -1,8 +1,7 @@
 /** @format */
 
 .footer {
-  display: flex;
-  flex-direction: column;
+  @include flexbox ($flex-direction: column, $align-items: start);
   padding: map-get($sizing, regular);
   background: $footer-bg;
 

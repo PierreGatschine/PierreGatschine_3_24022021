@@ -44,8 +44,6 @@
   padding-left: map-get($sizing, high);
 }
 
-/** Flexbox **/
-
 @mixin flexbox($flex-direction: row, $justify-content: space-between, $align-items: center, $align-content: space-around) {
     display: flex;
     flex-direction: $flex-direction;

@@ -9,13 +9,9 @@
     @include ol;
   }
   &__step {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    align-content: space-around;
+    @include flexbox ($justify-content: flex-start, $align-items: baseline);
     @include step-layout;
-    /* padding: 2rem 4rem; */
-    margin: 1rem 0 2rem 0.75rem;
+    margin: map-get($sizing, low) 0  (map-get($sizing, low) * 2) (map-get($sizing, low) * 0.75);
     box-shadow: $btn-shadow;
     border-radius: $size * 1.25;
     background: $bg-grey;
@@ -34,21 +30,21 @@
       margin-left: map-get($sizing, regular);
     }
     &::before {
-      display: flex;
+      @include flexbox ($justify-content: center);
+      /* display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center; */
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
       background: $color-primary;
-      height: $size * 2.2;
-      width: $size * 2.2;
+      @include dimension(#{$size*2.2});
       border-radius: 100%;
       color: $color-white;
       position: absolute;
       left: $size * -0.75;
     }
     &:hover {
-      background: transparentize($color-primary, 0.85);
+      background: $operation-hover;
       cursor: pointer;
     }
   }

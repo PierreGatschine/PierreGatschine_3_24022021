@@ -8,9 +8,6 @@
 /** Spacing **/
 /** @format */
 /** Bootstraps **/
-/** Flexbox **/
-/* @import "./utils/functions";
-@import "./utils/extensions"; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
 *,
 *::after,
@@ -26,7 +23,7 @@
 
 body {
   width: 100%;
-  min-width: 350px;
+  min-width: 400px;
 }
 
 :root {
@@ -131,8 +128,10 @@ a {
 /** @format */
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-content: space-around;
   padding: 2rem;
   background: #FFFFFF;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
@@ -158,6 +157,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-content: space-around;
   padding: 2rem;
   background: #EAEAEA;
   color: #353535;
@@ -174,6 +174,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  align-content: space-around;
   text-align: center;
   width: 100%;
   padding: 2rem;
@@ -205,6 +206,9 @@ a {
 .footer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  align-content: space-around;
   padding: 2rem;
   background: #353535;
 }
@@ -241,6 +245,7 @@ a {
 }
 .operation__step {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: baseline;
   align-content: space-around;
@@ -248,7 +253,6 @@ a {
   padding-right: 4rem;
   padding-bottom: 2rem;
   padding-left: 4rem;
-  /* padding: 2rem 4rem; */
   margin: 1rem 0 2rem 0.75rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   border-radius: 1.25rem;
@@ -272,8 +276,13 @@ a {
 }
 .operation__step::before {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-content: space-around;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
   background: #9256dc;
@@ -299,22 +308,31 @@ a {
   padding-bottom: 4rem;
   background: #F6F6F6;
 }
-
-.figure__card {
+@media all and (min-width: 750px) {
+  .restaurant {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: 750px) {
+  .restaurant__title {
+    grid-column: span 2;
+  }
+}
+.restaurant .figure__card {
   border-radius: 1rem;
   box-shadow: 2px 4px 8px 3px #e4e4e7;
   position: relative;
   background: #FFFFFF;
   cursor: pointer;
 }
-.figure__card--img {
+.restaurant .figure__card--img {
   height: 12.5rem;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
   position: relative;
 }
-.figure__card span {
+.restaurant .figure__card span {
   background: #99E2D0;
   color: #377E56;
   font-weight: 700;
@@ -324,22 +342,24 @@ a {
   top: 1.5rem;
   right: 1rem;
 }
-
-.figcaption__card {
-  padding: 1rem;
+.restaurant .figcaption__card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  align-content: space-around;
+  padding: 1rem;
 }
-.figcaption__card--text {
+.restaurant .figcaption__card--text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: start;
+  align-content: space-around;
   padding: 1rem;
   position: relative;
 }
-.figcaption__card--btn {
+.restaurant .figcaption__card--btn {
   display: flex;
   align-items: center;
   justify-content: end;
@@ -351,7 +371,7 @@ a {
   position: relative;
   background: #FFFFFF;
 }
-.figcaption__card--like {
+.restaurant .figcaption__card--like {
   display: flex;
   align-items: end;
   justify-content: center;
@@ -368,12 +388,13 @@ a {
   justify-content: end;
   font-weight: normal;
 }
-.figcaption__card--like:hover {
+.restaurant .figcaption__card--like:hover {
   font-weight: bold;
   color: #ffa3e5;
   transition: 2.5s;
 }
 
+/* 
 @media (min-width: 750px) {
   .restaurant {
     grid-template-columns: repeat(2, 1fr);
@@ -382,7 +403,7 @@ a {
   .restaurant__title {
     grid-column: span 2;
   }
-}
+} */
 /** @format */
 .hero__page_menu--img {
   height: 50vh;

@@ -7,6 +7,13 @@
   grid-gap: $size * 2;
   @include padding-layout;
   background: $bg-grey;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__title {
+    @include tablet {
+      grid-column: span 2;
+  }
 }
 
 .figure__card {
@@ -36,16 +43,11 @@
 }
 
 .figcaption__card {
+  @include flexbox;
   padding: map-get($sizing, low);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 
   &--text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include flexbox($flex-direction: column, $justify-content: space-around, $align-items: start);
     padding: map-get($sizing, low);
     position: relative;
   }
@@ -59,6 +61,8 @@
   }
 }
 
+}
+/* 
 @media (min-width: 750px) {
   .restaurant {
     grid-template-columns: repeat(2, 1fr);
@@ -67,4 +71,4 @@
   .restaurant__title {
     grid-column: span 2;
   }
-}
+} */

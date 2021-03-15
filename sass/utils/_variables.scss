@@ -6,7 +6,6 @@ $color-white: #FFFFFF;
 $bg-grey: #F6F6F6;
 $linear-gradient: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
 
-
 /** Elements **/
 $header-color:#101010;
 $text-color: #000000;
@@ -15,17 +14,15 @@ $location-color:#353535;
 $span-new-bg: #99E2D0;
 $span-new-color: #377E56;
 
-
 /** Layouts **/
 $location-bg: #EAEAEA;
 $footer-bg: #353535;
 $footer-color:#FAFAFA;
 $resto-bg:#F6F6F6;
-
+$operation-hover: transparentize($color-primary, .85);
 
 /** measuring scale **/
 $size: 1rem;
-
 
 /** Bootstraps **/
 $sizing: (
@@ -33,8 +30,6 @@ $sizing: (
     regular: $size * 2,
     high: $size * 4,
 );
-
-
 /** Box-shadow **/
 $heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.5);
 $btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
