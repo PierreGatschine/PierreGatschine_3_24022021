@@ -8,6 +8,7 @@
 /** Spacing **/
 /** @format */
 /** Bootstraps **/
+/** Flexbox **/
 /* @import "./utils/functions";
 @import "./utils/extensions"; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
@@ -409,6 +410,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  align-content: space-around;
   margin-bottom: 2rem;
 }
 .resto__menu--title {
@@ -454,19 +456,24 @@ a {
   color: #ffa3e5;
   transition: 2.5s;
 }
-.resto .menu__starter,
-.resto .menu__middle {
+
+.menu__starter,
+.menu__middle {
   margin-bottom: 3.5rem;
 }
-.resto .menu__starter {
-  animation: appearance 800ms both ease-in-out;
+
+.menu__starter {
+  animation: appearance 1s both ease-in-out;
 }
-.resto .menu__middle {
-  animation: appearance 800ms 400ms both ease-in-out;
+
+.menu__middle {
+  animation: appearance 1.4s 800ms both ease-in-out;
 }
-.resto .menu__finish {
-  animation: appearance 800ms 800ms both ease-in-out;
+
+.menu__finish {
+  animation: appearance 1.6s 1.6s both ease-in-out;
 }
+
 @keyframes appearance {
   0% {
     opacity: 0;
@@ -477,91 +484,94 @@ a {
     transform: translateY(0);
   }
 }
-.resto .menu__choice {
+.menu__choice {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: space-around;
   background: #FFFFFF;
   position: relative;
   box-shadow: 2px 4px 8px 3px #e4e4e7;
+  padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 1.25rem;
-  padding: 1rem;
   overflow: hidden;
   cursor: pointer;
 }
-.resto .menu__choice--title {
+.menu__choice--title {
   flex-shrink: 5;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.resto .menu__choice--price {
+.menu__choice--price {
   flex-grow: 1;
-  margin: 0;
-  font-weight: 700;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+  align-content: space-around;
+  margin: 0;
+  font-weight: 700;
   padding-left: 3rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.resto .menu__choice--selected {
+.menu__choice--selected {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-content: space-around;
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
-  /* width: map-get($sizing, low) * 4; */
   transition-duration: 0.5s;
 }
-.resto .menu__choice:hover .resto .menu__choice--selected {
+.menu__choice:hover .menu__choice--selected {
   margin-right: -1rem;
-  /* margin-right: map-get($sizing, low) * -1; */
 }
-.resto .menu__choice--transform {
+.menu__choice--transform {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-content: space-around;
   height: 1.6rem;
   width: 1.6rem;
-  /* height: map-get($sizing, low) * 1.6;
-  width: map-get($sizing, low) * 1.6; */
   background: #FFFFFF;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   transform: rotate(180deg);
   transition-duration: 0.5s;
 }
-.resto .menu__choice:hover .resto .menu__choice--transform {
+.menu__choice:hover .menu__choice--transform {
   transform: rotate(0);
 }
-.resto .menu__choice--checked {
+.menu__choice--checked {
   color: #99E2D0;
 }
-.resto .menu__choice:hover {
+
+.menu__choice:hover {
   cursor: pointer;
 }
-.resto .menu__choice:hover--price {
+.menu__choice:hover--price {
   transform: translateX(-70px);
 }
-.resto .menu__choice:hover--selected {
-  /* opacity: 1; */
+.menu__choice:hover--selected {
   transform: scaleX(1);
 }
-.resto .menu__choice:hover--transform {
+.menu__choice:hover--transform {
   transform: rotate(360deg);
 }
-.resto .wrapper__btn {
+
+.wrapper__btn {
   display: flex;
-  text-decoration: none;
+  flex-direction: row;
   justify-content: center;
-  padding: 3rem 0;
+  align-items: center;
+  align-content: space-around;
+  text-decoration: none;
+  padding: 3rem;
 }
-.resto .wrapper__btn--order {
+.wrapper__btn--order {
   border: 0;
   padding: 1.5rem 4rem;
   font-weight: 500;
@@ -574,7 +584,7 @@ a {
   transform: scale(1);
   cursor: pointer;
 }
-.resto .wrapper__btn--order:hover {
+.wrapper__btn--order:hover {
   background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   transition: 2s;

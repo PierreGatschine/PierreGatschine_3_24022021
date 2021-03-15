@@ -27,7 +27,7 @@
 }
 
 /** Bootstraps **/
-@mixin dimension ($dimension:$size) {
+@mixin dimension ($dimension: $size) {
     height: $dimension;
     width: $dimension;
 }
@@ -44,7 +44,15 @@
   padding-left: map-get($sizing, high);
 }
 
+/** Flexbox **/
 
+@mixin flexbox($flex-direction: row, $justify-content: space-between, $align-items: center, $align-content: space-around) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+}
 
 @mixin btn(
   $color1: $color-primary,
