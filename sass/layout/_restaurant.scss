@@ -10,15 +10,15 @@
 }
 
 .figure__card {
-  border-radius: 1rem;
+  border-radius: $size * 1;
   box-shadow: $card-shadow;
   position: relative;
   background: $color-white;
   cursor: pointer;
   &--img {
-    height: 12.5rem;
+    height: $size * 12.5;
     width: 100%;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: $size $size 0 0;
     object-fit: cover;
     position: relative;
   }
@@ -27,16 +27,16 @@
     background: $span-new-bg;
     color: $span-new-color;
     font-weight: 700;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.125rem;
+    padding: $size * 0.5 $size * 1.5;
+    border-radius: $size * 0.125;
     position: absolute;
-    top: 1.5rem;
-    right: 1rem;
+    top: $size * 1.5;
+    right: $size;
   }
 }
 
 .figcaption__card {
-  padding: 1rem;
+  padding: map-get($sizing, low);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,53 +46,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1rem;
+    padding: map-get($sizing, low);
     position: relative;
   }
 
   &--btn {
-    height: 4rem;
-    width: 4rem;
-    background-color: transparent;
-    border: transparent 0px solid;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    cursor: pointer;
-    position: relative;
-    background: $header-color;
-
-    &:hover::before {
-      opacity: 1;
-    }
-
-    &::before {
-      opacity: 0;
-      transition: 0.5s;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: $linear-gradient;
-    }
+    @include heart;
   }
 
-  &--icon {
-    transition: 0.25s;
-    background: $color-white;
-    color: $heart-color;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: lighten;
+  &--like {
+    @include heart-hover;
   }
 }
 

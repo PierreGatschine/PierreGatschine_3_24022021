@@ -26,6 +26,26 @@
   transition: 2.5s;
 }
 
+/** Bootstraps **/
+@mixin dimension ($dimension:$size) {
+    height: $dimension;
+    width: $dimension;
+}
+
+@mixin padding-layout {
+  padding: map-get($sizing, regular);
+  padding-bottom: map-get($sizing, high);
+}
+
+@mixin step-layout {
+  padding-top: map-get($sizing, regular);
+  padding-right: map-get($sizing, high);
+  padding-bottom: map-get($sizing, regular);
+  padding-left: map-get($sizing, high);
+}
+
+
+
 @mixin btn(
   $color1: $color-primary,
   $color2: $color-secondary,
@@ -50,17 +70,47 @@
   }
 }
 
-@mixin padding-layout {
-    padding: map-get($sizing, regular);
-    padding-bottom: map-get($sizing, high);
+@mixin heart(
+  $justify-content: end,
+  $color: $color-white,
+  $unsize: $size * 4,
+  $padding: map-get($sizing, low))
+  {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+  width: $unsize;
+  height: $unsize;
+  border: transparent 0px solid;
+  padding: map-get($sizing, low);
+  cursor: pointer;
+  position: relative;
+  background: $color;
 }
 
-@mixin step-layout {
-     padding-top: map-get($sizing, regular);
-     padding-right: map-get($sizing, high);
-     padding-bottom: map-get($sizing, regular);
-     padding-left: map-get($sizing, high);
-    
+@mixin heart-hover(
+  $justify-content: end,
+  $align-items: center,
+  $bg: $color-white,
+  $padding: map-get($sizing, low)) 
+  {
+  display: flex;
+  align-items: $justify-content;
+  justify-content: $align-items;
+  padding: $padding;
+  background: $bg;
+  color: $heart-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-weight: normal;
+  &:hover {
+    font-weight: bold;
+    @include color-lighten;
+  }
 }
-
-
