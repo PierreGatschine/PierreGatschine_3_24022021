@@ -1,19 +1,28 @@
 /** @format */
 
 .operation {
-  display: grid;
+  
+  /* display: grid;
   grid-column: 1fr;
-  grid-row: repeat(auto, 1fr);
+  grid-row: repeat(auto, 1fr); */
   @include padding-layout;
+  
   &__steps {
+    @include flexbox ($flex-direction: column, $justify-content: center, $align-items: center);
+    @include tablet {
+    @include flexbox ($justify-content: space-around, $align-items: center);
+  }
+  @include desktop {
+    @include flexbox ($justify-content: space-around, $align-items: center);
+  }
     @include ol;
   }
   &__step {
     @include flexbox ($justify-content: flex-start, $align-items: baseline);
     @include step-layout;
-    margin: map-get($sizing, low) 0  (map-get($sizing, low) * 2) (map-get($sizing, low) * 0.75);
+    margin: map-get($sizing, low) 0 (map-get($sizing, low) * 2) (map-get($sizing, low) * 0.75);
     box-shadow: $btn-shadow;
-    border-radius: $size * 1.25;
+    border-radius: map-get($sizing, low) * 1.25;
     background: $bg-grey;
     position: relative;
     &--icon {
@@ -24,16 +33,13 @@
     &--text {
       flex-grow: 2;
     }
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
       flex: 1;
       margin: 0;
       margin-left: map-get($sizing, regular);
-    }
+    } */
     &::before {
       @include flexbox ($justify-content: center);
-      /* display: flex;
-      justify-content: center;
-      align-items: center; */
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
       background: $color-primary;

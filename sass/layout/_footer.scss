@@ -4,7 +4,6 @@
   @include flexbox ($flex-direction: column, $align-items: start);
   padding: map-get($sizing, regular);
   background: $footer-bg;
-
   &__list {
     list-style: none;
     &--contact {
@@ -14,7 +13,7 @@
     }
   }
   &__icons {
-    width: $size * 1.1;
+    width: map-get($sizing, low) * 1.1;
     margin-right: map-get($sizing, low) * 1.5;
   }
 }

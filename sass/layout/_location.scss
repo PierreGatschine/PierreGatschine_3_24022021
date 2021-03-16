@@ -4,7 +4,7 @@
     background: $location-bg;
     color: $location-color;
     &__icon {
-        margin-right: $size * 2;
+        margin-right: map-get($sizing, low) * 2;
     }
     &__text {
         font-weight: 500;

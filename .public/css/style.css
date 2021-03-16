@@ -227,17 +227,40 @@ a {
 
 /** @format */
 .operation {
-  display: grid;
+  /* display: grid;
   grid-column: 1fr;
-  grid-row: repeat(auto, 1fr);
+  grid-row: repeat(auto, 1fr); */
   padding: 2rem;
   padding-bottom: 4rem;
 }
 .operation__steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
   margin: 0;
   padding: 0;
   list-style: none;
   counter-reset: compteListe;
+}
+@media all and (min-width: 750px) {
+  .operation__steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+  }
+}
+@media all and (min-width: 1024px) {
+  .operation__steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+  }
 }
 @media (min-width: 64rem) {
   .operation__steps {
@@ -259,6 +282,11 @@ a {
   border-radius: 1.25rem;
   background: #F6F6F6;
   position: relative;
+  /* @media (min-width: 1024px) {
+    flex: 1;
+    margin: 0;
+    margin-left: map-get($sizing, regular);
+  } */
 }
 .operation__step--icon {
   padding-right: 1rem;
@@ -268,22 +296,12 @@ a {
 .operation__step--text {
   flex-grow: 2;
 }
-@media (min-width: 1024px) {
-  .operation__step {
-    flex: 1;
-    margin: 0;
-    margin-left: 2rem;
-  }
-}
 .operation__step::before {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: space-around;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
   background: #9256dc;

@@ -11,12 +11,12 @@
     left: $size;
     top: 45%;
     transform: translateY(-50%);
-    font-size: $size * 2;
+    font-size: map-get($sizing, low) * 2;
     color: $text-color;
   }
   @media (max-width: 400px) {
     &__arrow {
-      font-size: $size * 1.1;
+      font-size: map-get($sizing, low) * 1.1;
       transition: 2s;
     }
   }

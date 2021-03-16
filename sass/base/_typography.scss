@@ -30,8 +30,8 @@ h3 {
 
     &::after {
         content: "";
-        width: $size * 3.5;
-        height: $size * .5;
+        width: map-get($sizing, low) * 3.5;
+        height: map-get($sizing, low) * .5;
         background: $color-tertiary;
         position: absolute;
         left: 0;
