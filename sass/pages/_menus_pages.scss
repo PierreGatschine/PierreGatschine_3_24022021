@@ -1,5 +1,26 @@
 /** @format */
+@mixin grid ($grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+}
 
+.wrapper {
+  @include tv {
+    @include grid;
+    grid-template-areas: "img main main";
+    width: 100%;
+    background: $bg-grey;
+    .hero__page_menu {
+      height: 68vh;
+      width: 68vh;
+      &--img {
+        grid-area: img;
+        height: 68vh;
+        object-fit: cover;
+      }
+    }
+  }
+}
 .hero__page_menu {
   &--img {
     height: 50vh;
@@ -10,30 +31,68 @@
 }
 
 .resto {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  margin-top: $size * -6;
+  @include grid;
+  width: 100%;
+  margin-top: map-get($sizing, low) * -6;
   @include padding-resto;
   position: relative;
   display: block;
   border-radius: 4rem 4rem 0 0;
   background: $resto-bg;
   z-index: 1;
-  position: relative;
-  display: block;
-  
+  padding: map-get($sizing, regular);
+  @include tablet {
+    max-width: 100%;
+    @include grid;
+    grid-template-areas:
+      "title title"
+      "starter middle"
+      "finish btn";
+    grid-gap: $size * 2;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-areas:
+      "title title btn"
+      "starter middle finish";
+    grid-gap: $size * 2;
+  }
+  @include tv {
+     grid-area: main;
+      height: 68vh;
+      width: calc(100% + $size * 3);
+      margin-top: 0;
+      border-radius: 4rem 0 0 4rem;
+      @include grid;
+      grid-template-areas:
+        "title title btn"
+        "starter middle finish";
+      grid-gap: $size * 2;
+  }
+
   &__menu {
-    @include flexbox ($justify-content: space-between);
+    grid-area: title;
+    @include flexbox($justify-content: space-between);
     margin-bottom: map-get($sizing, low) * 2;
+    @include desktop {
+        @include flexbox($justify-content: start);
+        margin-bottom: 0;
+      }
+    @include tv {
+        @include flexbox($justify-content: start);
+        margin-bottom: 0;
+      }
     &--title {
       font-family: $shrikhand;
-      flex-grow: 2;
-      @include text-ellipsis;
-      padding: 2rem 0;
+      padding: (map-get($sizing, low ) * 2) 0;
+      font-size: map-get($sizing, low ) * 1.5;
+      @include tablet {
+      font-size: map-get($sizing, low ) * 2;
+      }
     }
 
     &--btn {
+      grid-area: heart;
       @include heart($justify-content: center, $color: $resto-bg);
     }
 
@@ -53,15 +112,23 @@
 }
 
 .menu__starter {
+  grid-area: starter;
   animation: appearance 1s both ease-in-out;
 }
 
 .menu__middle {
+  grid-area: middle;
   animation: appearance 1.4s 800ms both ease-in-out;
 }
 
 .menu__finish {
+  grid-area: finish;
   animation: appearance 1.6s 1.6s both ease-in-out;
+}
+
+.wrapper__btn {
+  grid-area: btn;
+  animation: appearance 2s 2.4s both ease-in-out;
 }
 
 @keyframes appearance {
@@ -94,7 +161,7 @@
 
   &--price {
     flex-grow: 1;
-    @include flexbox ($justify-content: flex-end, $align-items: flex-end);
+    @include flexbox($justify-content: flex-end, $align-items: flex-end);
     margin: 0;
     font-weight: 700;
     padding-left: map-get($sizing, low) * 3;
@@ -102,11 +169,11 @@
   }
 
   &--selected {
-    @include flexbox ($justify-content: center, $align-items: center);
+    @include flexbox($justify-content: center, $align-items: center);
     background-color: $color-tertiary;
     margin: $size * -1 $size * -5 $size * -1 $size;
     width: map-get($sizing, low) * 4;
-    transition-duration: 0.5s;
+    transition-duration: .5s;
   }
 
   &:hover &--selected {
@@ -114,7 +181,7 @@
   }
 
   &--transform {
-    @include flexbox ($justify-content: center, $align-items: center);
+    @include flexbox($justify-content: center, $align-items: center);
     @include dimension(#{$size * 1.6});
     background: $color-white;
     border-radius: map-get($sizing, low) * 6.25;
@@ -148,12 +215,23 @@
 }
 
 .wrapper__btn {
-  @include flexbox ($justify-content: center);
+  @include flexbox($justify-content: center);
   text-decoration: none;
   padding: map-get($sizing, low) * 3;
 
   &--order {
     @include btn;
     cursor: pointer;
+  }
+  @include tablet {
+    @include flexbox($justify-content: center);
+    padding: (map-get($sizing, low) * 3.75) 0 0 (map-get($sizing, low) * 3.75);
+  }
+  @include desktop {
+    @include flexbox($justify-content: end);
+    padding: 0;
+  }
+  @include tv {
+     @include flexbox($justify-content: end);
   }
 }

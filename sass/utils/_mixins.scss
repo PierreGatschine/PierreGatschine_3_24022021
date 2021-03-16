@@ -15,6 +15,13 @@
   }
 }
 
+@mixin logo($ff:$shrikhand, $color:$header-color, $fz:#{$size*2.5}, $lh:#{$size*2}) {
+    font-family: $ff;
+    color: $color;
+    font-size: $fz;
+    line-height: $lh;
+}
+
 @mixin text-ellipsis {
   overflow: hidden;
   white-space: nowrap;
@@ -49,6 +56,11 @@
   padding-left: map-get($sizing, high);
 }
 
+@mixin grid ($grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+}
+
 @mixin flexbox($flex-direction: row, $justify-content: space-between, $align-items: center, $align-content: space-around) {
     display: flex;
     flex-direction: $flex-direction;
@@ -57,6 +69,7 @@
     align-content: $align-content;
 }
 
+/** Component **/
 @mixin btn(
   $color1: $color-primary,
   $color2: $color-secondary,

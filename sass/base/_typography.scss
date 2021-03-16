@@ -62,13 +62,6 @@ a {
     color: $footer-color;
 }
 
-@mixin logo($ff:$shrikhand, $color:$header-color, $fz:#{$size*2.5}, $lh:#{$size*2}) {
-    font-family: $ff;
-    color: $color;
-    font-size: $fz;
-    line-height: $lh;
-}
-
 .header__logo {
      @include logo;
 }
