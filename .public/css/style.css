@@ -23,7 +23,7 @@
 
 body {
   width: 100%;
-  min-width: 400px;
+  min-width: 350px;
 }
 
 :root {
@@ -418,12 +418,14 @@ a {
   grid-template-rows: 1fr;
   margin-top: -6rem;
   padding-right: 0.3rem;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  position: relative;
+  display: block;
   border-radius: 4rem 4rem 0 0;
   background: #F6F6F6;
   z-index: 1;
   position: relative;
-  padding: 2rem;
-  padding-bottom: 4rem;
   display: block;
 }
 .resto__menu {

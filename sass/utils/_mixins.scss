@@ -37,6 +37,11 @@
   padding-bottom: map-get($sizing, high);
 }
 
+@mixin padding-resto {
+  padding-right: map-get($sizing, low) * 0.3;
+  @include padding-layout;
+}
+
 @mixin step-layout {
   padding-top: map-get($sizing, regular);
   padding-right: map-get($sizing, high);

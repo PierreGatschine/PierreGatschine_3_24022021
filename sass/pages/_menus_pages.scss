@@ -14,14 +14,15 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   margin-top: $size * -6;
-  padding-right: map-get($sizing, low) * 0.3;
+  @include padding-resto;
+  position: relative;
+  display: block;
   border-radius: 4rem 4rem 0 0;
   background: $resto-bg;
   z-index: 1;
   position: relative;
-  @include padding-layout;
   display: block;
-
+  
   &__menu {
     @include flexbox ($justify-content: space-between);
     margin-bottom: map-get($sizing, low) * 2;
