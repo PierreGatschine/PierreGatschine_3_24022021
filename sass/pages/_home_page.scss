@@ -1,0 +1,7 @@
+.container {
+
+  @include tv {
+        @include grid;
+        grid-template-areas: "operation restaurant restaurant ";
+    } 
+}

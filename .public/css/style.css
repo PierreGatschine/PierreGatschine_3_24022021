@@ -182,6 +182,28 @@ a {
   padding-bottom: 4rem;
   background: #F6F6F6;
 }
+@media all and (min-width: 1400px) {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    grid-template-areas: "title text . btn";
+    grid-row-start: span 2;
+    padding: 2rem 6rem;
+  }
+}
+@media all and (min-width: 1400px) {
+  .hero__title {
+    grid-area: title;
+    padding: 0;
+  }
+}
+@media all and (min-width: 1400px) {
+  .hero__text {
+    grid-area: text;
+  }
+}
 .hero__btn {
   border: 0;
   padding: 1.5rem 4rem;
@@ -201,6 +223,11 @@ a {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   transition: 2s;
   transform: scale(1.01);
+}
+@media all and (min-width: 1400px) {
+  .hero__btn {
+    grid-area: btn;
+  }
 }
 
 /** @format */
@@ -227,6 +254,7 @@ a {
 
 /** @format */
 .operation {
+  grid-area: operation;
   /* display: grid;
   grid-column: 1fr;
   grid-row: repeat(auto, 1fr); */
@@ -243,6 +271,11 @@ a {
   padding: 0;
   list-style: none;
   counter-reset: compteListe;
+}
+@media (min-width: 64rem) {
+  .operation__steps {
+    display: flex;
+  }
 }
 @media all and (min-width: 750px) {
   .operation__steps {
@@ -262,9 +295,14 @@ a {
     align-content: space-around;
   }
 }
-@media (min-width: 64rem) {
+@media all and (min-width: 1400px) {
   .operation__steps {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    padding-top: 1rem;
   }
 }
 .operation__step {
@@ -287,6 +325,16 @@ a {
     margin: 0;
     margin-left: map-get($sizing, regular);
   } */
+}
+@media all and (min-width: 750px) {
+  .operation__step {
+    width: 15rem;
+  }
+}
+@media all and (min-width: 1024px) {
+  .operation__step {
+    width: 20rem;
+  }
 }
 .operation__step--icon {
   padding-right: 1rem;
@@ -319,6 +367,7 @@ a {
 
 /** @format */
 .restaurant {
+  grid-area: restaurant;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -332,9 +381,20 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media all and (min-width: 1400px) {
+  .restaurant {
+    background: #FFFFFF;
+    padding-right: 4rem;
+  }
+}
 @media all and (min-width: 750px) {
   .restaurant__title {
-    grid-column: span 2;
+    grid-column-start: span 2;
+  }
+}
+@media all and (min-width: 1400px) {
+  .restaurant__title {
+    padding-left: 0;
   }
 }
 .restaurant .figure__card {
@@ -413,21 +473,22 @@ a {
   transition: 2.5s;
 }
 
-/* 
-@media (min-width: 750px) {
-  .restaurant {
-    grid-template-columns: repeat(2, 1fr);
+@media all and (min-width: 1400px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    grid-template-areas: "operation restaurant restaurant ";
   }
+}
 
-  .restaurant__title {
-    grid-column: span 2;
-  }
-} */
 /** @format */
 @media all and (min-width: 1400px) {
   .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
     grid-template-areas: "img main main";
     width: 100%;
     background: #F6F6F6;
@@ -453,6 +514,7 @@ a {
 .resto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
   width: 100%;
   margin-top: -6rem;
   padding-right: 0.3rem;
@@ -468,17 +530,16 @@ a {
 @media all and (min-width: 750px) {
   .resto {
     max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /*  @include grid; */
     grid-template-areas: "title title" "starter middle" "finish btn";
-    grid-gap: 2rem;
+    /* grid-gap: $size * 2; */
   }
 }
 @media all and (min-width: 1024px) {
   .resto {
     display: grid;
     grid-template-areas: "title title btn" "starter middle finish";
-    grid-gap: 2rem;
+    /* grid-gap: $size * 2; */
   }
 }
 @media all and (min-width: 1400px) {
@@ -488,10 +549,9 @@ a {
     width: calc(100% + $size * 3);
     margin-top: 0;
     border-radius: 4rem 0 0 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /*  @include grid; */
     grid-template-areas: "title title btn" "starter middle finish";
-    grid-gap: 2rem;
+    /* grid-gap: $size * 2; */
   }
 }
 .resto__menu {

@@ -1,7 +1,7 @@
 /** @format */
 
 .operation {
-  
+  grid-area: operation;
   /* display: grid;
   grid-column: 1fr;
   grid-row: repeat(auto, 1fr); */
@@ -9,13 +9,18 @@
   
   &__steps {
     @include flexbox ($flex-direction: column, $justify-content: center, $align-items: center);
+    @include ol;
     @include tablet {
     @include flexbox ($justify-content: space-around, $align-items: center);
   }
   @include desktop {
     @include flexbox ($justify-content: space-around, $align-items: center);
   }
-    @include ol;
+  @include tv {
+    @include flexbox($flex-direction: column, $justify-content: space-around, $align-items: center);
+    padding-top: map-get($sizing, low);
+  }
+    
   }
   &__step {
     @include flexbox ($justify-content: flex-start, $align-items: baseline);
@@ -25,6 +30,12 @@
     border-radius: map-get($sizing, low) * 1.25;
     background: $bg-grey;
     position: relative;
+    @include tablet {
+    width: map-get($sizing, low) * 15;
+  }
+    @include desktop {
+    width: map-get($sizing, low) * 20;
+  }
     &--icon {
       padding-right: map-get($sizing, low);
       flex-grow: 1;

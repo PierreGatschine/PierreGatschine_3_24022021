@@ -15,11 +15,16 @@
   }
 }
 
-@mixin logo($ff:$shrikhand, $color:$header-color, $fz:#{$size*2.5}, $lh:#{$size*2}) {
-    font-family: $ff;
-    color: $color;
-    font-size: $fz;
-    line-height: $lh;
+@mixin logo(
+  $ff: $shrikhand,
+  $color: $header-color,
+  $fz: #{$size * 2.5},
+  $lh: #{$size * 2}
+) {
+  font-family: $ff;
+  color: $color;
+  font-size: $fz;
+  line-height: $lh;
 }
 
 @mixin text-ellipsis {
@@ -34,9 +39,9 @@
 }
 
 /** Bootstraps **/
-@mixin dimension ($dimension: $size) {
-    height: $dimension;
-    width: $dimension;
+@mixin dimension($dimension: $size) {
+  height: $dimension;
+  width: $dimension;
 }
 
 @mixin padding-layout {
@@ -56,17 +61,28 @@
   padding-left: map-get($sizing, high);
 }
 
-@mixin grid ($grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))) {
+@mixin grid(
+  $grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)),
+  $grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)),
+  $grid-gap: #{map-get($sizing, low) * 2}
+) {
   display: grid;
   grid-template-columns: $grid-template-columns;
+  grid-template-rows: $grid-template-rows;
+  grid-gap: $grid-gap;
 }
 
-@mixin flexbox($flex-direction: row, $justify-content: space-between, $align-items: center, $align-content: space-around) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    align-content: $align-content;
+@mixin flexbox(
+  $flex-direction: row,
+  $justify-content: space-between,
+  $align-items: center,
+  $align-content: space-around
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content: $align-content;
 }
 
 /** Component **/
@@ -98,8 +114,8 @@
   $justify-content: end,
   $color: $color-white,
   $unsize: $size * 4,
-  $padding: map-get($sizing, low))
-  {
+  $padding: map-get($sizing, low)
+) {
   display: flex;
   align-items: center;
   justify-content: $justify-content;
@@ -116,8 +132,8 @@
   $justify-content: end,
   $align-items: center,
   $bg: $color-white,
-  $padding: map-get($sizing, low)) 
-  {
+  $padding: map-get($sizing, low)
+) {
   display: flex;
   align-items: $justify-content;
   justify-content: $align-items;

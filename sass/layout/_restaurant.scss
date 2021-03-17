@@ -1,6 +1,7 @@
 /** @format */
 
 .restaurant {
+  grid-area: restaurant;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -10,65 +11,67 @@
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
   }
+  @include tv {
+    background: $color-white;
+    padding-right: map-get($sizing, high);
+  }
   &__title {
     @include tablet {
-      grid-column: span 2;
+      grid-column-start: span 2;
+    }
+    @include tv {
+    padding-left: 0;
   }
-}
 
-.figure__card {
-  border-radius: $size * 1;
-  box-shadow: $card-shadow;
-  position: relative;
-  background: $color-white;
-  cursor: pointer;
-  &--img {
-    height: $size * 12.5;
-    width: 100%;
-    border-radius: $size $size 0 0;
-    object-fit: cover;
+  }
+
+  .figure__card {
+    border-radius: $size * 1;
+    box-shadow: $card-shadow;
     position: relative;
+    background: $color-white;
+    cursor: pointer;
+    &--img {
+      height: $size * 12.5;
+      width: 100%;
+      border-radius: $size $size 0 0;
+      object-fit: cover;
+      position: relative;
+    }
+
+    span {
+      background: $span-new-bg;
+      color: $span-new-color;
+      font-weight: 700;
+      padding: $size * 0.5 $size * 1.5;
+      border-radius: $size * 0.125;
+      position: absolute;
+      top: $size * 1.5;
+      right: $size;
+    }
   }
 
-  span {
-    background: $span-new-bg;
-    color: $span-new-color;
-    font-weight: 700;
-    padding: $size * 0.5 $size * 1.5;
-    border-radius: $size * 0.125;
-    position: absolute;
-    top: $size * 1.5;
-    right: $size;
-  }
-}
-
-.figcaption__card {
-  @include flexbox;
-  padding: map-get($sizing, low);
-
-  &--text {
-    @include flexbox($flex-direction: column, $justify-content: space-around, $align-items: start);
+  .figcaption__card {
+    @include flexbox;
     padding: map-get($sizing, low);
-    position: relative;
-  }
 
-  &--btn {
-    @include heart;
-  }
+    &--text {
+      @include flexbox(
+        $flex-direction: column,
+        $justify-content: space-around,
+        $align-items: start
+      );
+      padding: map-get($sizing, low);
+      position: relative;
+    }
 
-  &--like {
-    @include heart-hover;
+    &--btn {
+      @include heart;
+    }
+
+    &--like {
+      @include heart-hover;
+    }
   }
 }
 
-}
-/* 
-@media (min-width: 750px) {
-  .restaurant {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .restaurant__title {
-    grid-column: span 2;
-  }
-} */

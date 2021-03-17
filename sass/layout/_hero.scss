@@ -4,8 +4,30 @@
     width: 100%;
     @include padding-layout;
     background: $bg-grey;
+    @include tv {
+        @include grid;
+        grid-template-areas: 
+        "title text . btn";
+        
+        grid-row-start: span 2;
+        padding: map-get($sizing, regular) (map-get($sizing, regular) * 3);
+    }
+    &__title {
+        @include tv {
+            grid-area: title;
+            padding: 0;
+        }
+    }
+    &__text {
+        @include tv {
+            grid-area: text;
+        }
+    }
     &__btn {
         @include btn($color-primary, $color-secondary);
         @include a;
+        @include tv {
+           grid-area: btn;
+        }
     }  
 }
