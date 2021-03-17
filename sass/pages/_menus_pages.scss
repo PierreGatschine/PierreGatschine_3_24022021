@@ -12,11 +12,14 @@
     background: $bg-grey;
     .hero__page_menu {
       height: 68vh;
-      width: 68vh;
+      width: 70vh;
+      /* object-fit: cover;
+      object-position: rigth bottom; */
       &--img {
         grid-area: img;
         height: 68vh;
-        object-fit: cover;
+        /* object-fit: cover;
+        object-position: rigth bottom; */
       }
     }
   }
