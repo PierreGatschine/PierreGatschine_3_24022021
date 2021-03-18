@@ -8,7 +8,7 @@
     list-style: none;
     &--contact {
       &:hover {
-        @include color-lighten;
+       @include heart-lighten;
       }
     }
   }

@@ -120,8 +120,8 @@ a {
   transform: scale(1);
 }
 .btn:hover {
-  background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   transition: 2s;
   transform: scale(1.01);
 }
@@ -224,8 +224,8 @@ a {
   color: #FFFFFF;
 }
 .hero__btn:hover {
-  background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   transition: 2s;
   transform: scale(1.01);
 }
@@ -249,8 +249,10 @@ a {
   list-style: none;
 }
 .footer__list--contact:hover {
-  color: #ffa3e5;
-  transition: 2.5s;
+  color: #ff8edf;
+  transform: scaleX(1.2);
+  transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 .footer__icons {
   width: 1.1rem;
@@ -454,6 +456,8 @@ a {
   cursor: pointer;
   position: relative;
   background: #FFFFFF;
+  transform: translateY(0%);
+  transitition: transform 2s;
 }
 .restaurant .figcaption__card--like {
   display: flex;
@@ -471,11 +475,19 @@ a {
   align-items: center;
   justify-content: end;
   font-weight: normal;
+  transform: scale(1);
+  transition: all 4s;
+  transform: translateY(5px);
+  transitition: transform 2s ease-in-out;
+  overflow: hidden;
 }
 .restaurant .figcaption__card--like:hover {
   font-weight: bold;
-  color: #ffa3e5;
-  transition: 2.5s;
+  color: #9256dc;
+  color: #ff8edf;
+  transform: scaleX(1.2);
+  transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 
 @media all and (min-width: 1400px) {
@@ -595,6 +607,7 @@ a {
   font-family: "Shrikhand", cursive;
   padding: 2rem 0;
   font-size: 1.5rem;
+  z-index: 1;
 }
 @media all and (min-width: 750px) {
   .resto__menu--title {
@@ -613,6 +626,13 @@ a {
   cursor: pointer;
   position: relative;
   background: #F6F6F6;
+  transform: translateY(0%);
+  transitition: transform 2s;
+}
+@media all and (min-width: 1400px) {
+  .resto__menu--btn {
+    padding-left: 3rem;
+  }
 }
 .resto__menu--like {
   display: flex;
@@ -630,12 +650,20 @@ a {
   align-items: center;
   justify-content: end;
   font-weight: normal;
+  transform: scale(1);
+  transition: all 4s;
+  transform: translateY(5px);
+  transitition: transform 2s ease-in-out;
+  overflow: hidden;
   padding-right: 1.7rem;
 }
 .resto__menu--like:hover {
   font-weight: bold;
-  color: #ffa3e5;
-  transition: 2.5s;
+  color: #9256dc;
+  color: #ff8edf;
+  transform: scaleX(1.2);
+  transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 
 .menu__starter,
@@ -713,7 +741,7 @@ a {
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
-  transition-duration: 0.5s;
+  transition: 1s;
 }
 .menu__choice:hover .menu__choice--selected {
   margin-right: -1rem;
@@ -729,7 +757,7 @@ a {
   background: #FFFFFF;
   border-radius: 6.25rem;
   transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transition: 1s;
 }
 .menu__choice:hover .menu__choice--transform {
   transform: rotate(0);
@@ -748,7 +776,7 @@ a {
   transform: scaleX(1);
 }
 .menu__choice:hover--transform {
-  transform: rotate(360deg);
+  transform: rotate(1turn);
 }
 
 .wrapper__btn {
@@ -774,8 +802,8 @@ a {
   cursor: pointer;
 }
 .wrapper__btn--order:hover {
-  background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   transition: 2s;
   transform: scale(1.01);
 }

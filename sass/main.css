@@ -128,9 +128,9 @@ a {
 }
 
 .btn:hover {
-  background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   -webkit-transition: 2s;
   transition: 2s;
   -webkit-transform: scale(1.01);
@@ -290,9 +290,9 @@ a {
 }
 
 .hero__btn:hover {
-  background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   -webkit-transition: 2s;
   transition: 2s;
   -webkit-transform: scale(1.01);
@@ -333,9 +333,12 @@ a {
 }
 
 .footer__list--contact:hover {
-  color: #ffa3e5;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  color: #ff8edf;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 
 .footer__icons {
@@ -658,6 +661,9 @@ a {
   cursor: pointer;
   position: relative;
   background: #FFFFFF;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  transitition: transform 2s;
 }
 
 .restaurant .figcaption__card--like {
@@ -686,13 +692,25 @@ a {
       -ms-flex-pack: end;
           justify-content: end;
   font-weight: normal;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 4s;
+  transition: all 4s;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  transitition: transform 2s ease-in-out;
+  overflow: hidden;
 }
 
 .restaurant .figcaption__card--like:hover {
   font-weight: bold;
-  color: #ffa3e5;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  color: #9256dc;
+  color: #ff8edf;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 
 @media all and (min-width: 1400px) {
@@ -860,6 +878,7 @@ a {
   font-family: "Shrikhand", cursive;
   padding: 2rem 0;
   font-size: 1.5rem;
+  z-index: 1;
 }
 
 @media all and (min-width: 750px) {
@@ -886,6 +905,15 @@ a {
   cursor: pointer;
   position: relative;
   background: #F6F6F6;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  transitition: transform 2s;
+}
+
+@media all and (min-width: 1400px) {
+  .resto__menu--btn {
+    padding-left: 3rem;
+  }
 }
 
 .resto__menu--like {
@@ -912,14 +940,26 @@ a {
       -ms-flex-pack: end;
           justify-content: end;
   font-weight: normal;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 4s;
+  transition: all 4s;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  transitition: transform 2s ease-in-out;
+  overflow: hidden;
   padding-right: 1.7rem;
 }
 
 .resto__menu--like:hover {
   font-weight: bold;
-  color: #ffa3e5;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  color: #9256dc;
+  color: #ff8edf;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 
 .menu__starter,
@@ -1046,8 +1086,8 @@ a {
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .menu__choice:hover .menu__choice--selected {
@@ -1076,8 +1116,8 @@ a {
   border-radius: 6.25rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .menu__choice:hover .menu__choice--transform {
@@ -1104,8 +1144,8 @@ a {
 }
 
 .menu__choice:hover--transform {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
 }
 
 .wrapper__btn {
@@ -1145,9 +1185,9 @@ a {
 }
 
 .wrapper__btn--order:hover {
-  background: linear-gradient(10deg, #9256dc 1%, #ff7ad9 100%);
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   -webkit-transition: 2s;
   transition: 2s;
   -webkit-transform: scale(1.01);
