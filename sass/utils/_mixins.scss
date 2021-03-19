@@ -32,10 +32,17 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-@mixin color-lighten($color1: $color-secondary) {
-  color: lighten($color1, 8);
+@mixin linear-gradient($color1: $color-test1, $color2: $color-test2) {
+  colo: -webkit-linear-gradient($color1, $color2);
+  color: -moz-linear-gradient($color1, $color2);
   transition: 2.5s;
+}
+
+@mixin heart-lighten($color1: $color-secondary) {
+  color: lighten($color1, 4);
+  transform: scaleX(1.2);
+  transform: translateY(0%);
+  transitition: transform 2s ease-in-out;
 }
 
 /** Bootstraps **/
@@ -103,8 +110,8 @@
   transform: scale(1);
 
   &:hover {
-    background: linear-gradient(10deg, $color1 1%, $color2 100%);
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(15deg, $color1 -5%, $color2 100%);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
     transition: 2s;
     transform: scale(1.01);
   }
@@ -126,6 +133,8 @@
   cursor: pointer;
   position: relative;
   background: $color;
+  transform: translateY(0%);
+  transitition: transform 2s;
 }
 
 @mixin heart-hover(
@@ -149,8 +158,14 @@
   align-items: center;
   justify-content: end;
   font-weight: normal;
+  transform: scale(1);
+  transition: all 4s;
+  transform: translateY(5px);
+  transitition: transform 2s ease-in-out;
+  overflow: hidden;
   &:hover {
     font-weight: bold;
-    @include color-lighten;
+    color: $color-primary;
+    @include heart-lighten;
   }
 }
