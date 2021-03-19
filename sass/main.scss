@@ -2,10 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
 
-
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/responsive";
+@import "./utils/animation_loader";
 
 @import "./base/base";
 @import "./base/typography";

@@ -9,7 +9,66 @@
 /** @format */
 /** Bootstraps **/
 /** Component **/
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
+.loader {
+  z-index: 3;
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(250, 250, 250, 0.9);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 153, 212, 0) calc(15% + 100px), rgba(0, 99, 138, 0) calc(85% + 100px), rgba(0, 0, 0, 0.15) 100%);
+  animation: loader 0.01s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+}
+.loader__ball {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%;
+  margin: 2vw;
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+  animation: bounce 1.5s 0.5s linear;
+  animation-iteration-count: 3;
+}
+.loader__ball--purple {
+  background: #9256dc;
+  animation-delay: 0.1s;
+}
+.loader__ball--pink {
+  background: #ff7ad9;
+  animation-delay: 0.2s;
+}
+.loader__ball--green {
+  background: #99E2D0;
+  animation-delay: 0.3s;
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes bounce {
+  0%, 50%, 100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  25% {
+    transform: scale(0.6);
+    filter: blur(3px);
+  }
+  75% {
+    filter: blur(3px);
+    transform: scale(1.4);
+  }
+}
 *,
 *::after,
 *::before {
@@ -713,7 +772,7 @@ a {
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 .menu__choice:hover .menu__choice--selected {
   margin-right: -1rem;
@@ -729,7 +788,7 @@ a {
   background: #FFFFFF;
   border-radius: 6.25rem;
   transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 .menu__choice:hover .menu__choice--transform {
   transform: rotate(0);

@@ -176,7 +176,7 @@
     background-color: $color-tertiary;
     margin: $size * -1 $size * -5 $size * -1 $size;
     width: map-get($sizing, low) * 4;
-    transition-duration: .5s;
+    transition-duration: 1s;
   }
 
   &:hover &--selected {
@@ -189,7 +189,7 @@
     background: $color-white;
     border-radius: map-get($sizing, low) * 6.25;
     transform: rotate(180deg);
-    transition-duration: .5s;
+    transition-duration: 1s;
   }
 
   &:hover &--transform {
