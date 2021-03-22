@@ -3,9 +3,9 @@
 .restaurant {
   grid-area: restaurant;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-gap: $size * 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: map-get($sizing, low) * 2;
   @include padding-layout;
   background: $bg-grey;
   @include tablet {
@@ -20,21 +20,20 @@
       grid-column-start: span 2;
     }
     @include tv {
-    padding-left: 0;
-  }
-
+      padding-left: 0;
+    }
   }
 
   .figure__card {
-    border-radius: $size * 1;
+    border-radius: map-get($sizing, low) * 1;
     box-shadow: $card-shadow;
     position: relative;
     background: $color-white;
     cursor: pointer;
     &--img {
-      height: $size * 12.5;
+      height: map-get($sizing, low) * 12.5;
       width: 100%;
-      border-radius: $size $size 0 0;
+      border-radius: map-get($sizing, low) map-get($sizing, low) 0 0;
       object-fit: cover;
       position: relative;
     }
@@ -43,11 +42,11 @@
       background: $span-new-bg;
       color: $span-new-color;
       font-weight: 700;
-      padding: $size * 0.5 $size * 1.5;
-      border-radius: $size * 0.125;
+      padding: (map-get($sizing, low) * 0.5) (map-get($sizing, low) * 1.5);
+      border-radius: map-get($sizing, low) * 0.125;
       position: absolute;
-      top: $size * 1.5;
-      right: $size;
+      top: map-get($sizing, low) * 1.5;
+      right: map-get($sizing, low);
     }
   }
 
@@ -74,4 +73,3 @@
     }
   }
 }
-

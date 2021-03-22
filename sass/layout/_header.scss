@@ -1,7 +1,7 @@
 /** @format */
 
 .header {
-  @include flexbox ($justify-content: center);
+  @include flexbox($justify-content: center);
   padding: map-get($sizing, regular);
   background: $color-white;
   box-shadow: $btn-shadow;

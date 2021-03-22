@@ -42,7 +42,7 @@
   color: lighten($color1, 4);
   transform: scaleX(1.2);
   transform: translateY(0%);
-  transitition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 
 /** Bootstraps **/
@@ -99,9 +99,9 @@
   $color3: $color-white
 ) {
   border: 0;
-  padding: 1.5rem 4rem;
+  padding: (map-get($sizing, low) * 1.5) (map-get($sizing, low) * 4);
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: map-get($sizing, low);
   color: $color3;
   border-radius: 100px;
   background: linear-gradient(-5deg, $color1 2%, $color2 98%);
@@ -112,7 +112,7 @@
   &:hover {
     background: linear-gradient(15deg, $color1 -5%, $color2 100%);
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
-    transition: 2s;
+    transition: transform 2s;
     transform: scale(1.01);
   }
 }
@@ -120,7 +120,7 @@
 @mixin heart(
   $justify-content: end,
   $color: $color-white,
-  $unsize: $size * 4,
+  $unsize: map-get($sizing, low) * 4,
   $padding: map-get($sizing, low)
 ) {
   display: flex;
@@ -134,7 +134,7 @@
   position: relative;
   background: $color;
   transform: translateY(0%);
-  transitition: transform 2s;
+  transition: transform 2s;
 }
 
 @mixin heart-hover(
@@ -161,7 +161,7 @@
   transform: scale(1);
   transition: all 4s;
   transform: translateY(5px);
-  transitition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
   overflow: hidden;
   &:hover {
     font-weight: bold;

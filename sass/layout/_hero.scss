@@ -1,39 +1,35 @@
+/** @format */
+
 .hero {
-    @include flexbox ($flex-direction: column);
-    text-align: center;
-    width: 100%;
-    @include padding-layout;
-    background: $bg-grey;
+  @include flexbox($flex-direction: column);
+  text-align: center;
+  width: 100%;
+  @include padding-layout;
+  background: $bg-grey;
+  @include tv {
+    display: grid;
+    grid-template: repeat(2, 50px) / repeat(4, 300px);
+    padding: map-get($sizing, regular) (map-get($sizing, regular) * 3);
+  }
+  &__title {
     @include tv {
-        display: grid;
-        grid-template: repeat(2, 50px) / repeat(4, 300px);
-        /* grid-gap: map-get($sizing, low ) * 2; */
-       /* @include grid;
-        grid-template-areas: 
-        "title text . btn";
-        
-        grid-row-start: span 2; */
-        padding: map-get($sizing, regular) (map-get($sizing, regular) * 3);
+      grid-area: 1 / 1 / 1 / 5;
+      justify-self: start;
+      padding: 0;
     }
-    &__title {
-        @include tv {
-            grid-area: 1 / 1 / 1 / 5;
-             justify-self: start;
-            padding: 0;
-        }
+  }
+  &__text {
+    @include tv {
+      grid-area: 2 / 1 / 2 / 4;
+      justify-self: start;
+      padding: 0;
     }
-    &__text {
-        @include tv {
-            grid-area: 2 / 1 / 2 / 4;
-            justify-self: start;
-            padding: 0;
-        }
+  }
+  &__btn {
+    @include btn($color-primary, $color-secondary);
+    @include a;
+    @include tv {
+      grid-area: 1 / 3 / span 2 / -1;
     }
-    &__btn {
-        @include btn($color-primary, $color-secondary);
-        @include a;
-        @include tv {
-           grid-area: 1 / 3 / span 2 / -1;
-        }
-    }  
+  }
 }

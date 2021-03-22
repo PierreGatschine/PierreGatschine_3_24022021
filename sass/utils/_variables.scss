@@ -1,47 +1,48 @@
-/** Colors **/
+/**
+ * Colors *
+ *
+ * @format
+ */
+
 $color-primary: #9256dc;
 $color-secondary: #ff7ad9;
-$color-tertiary: #99E2D0;
-$color-white: #FFFFFF;
-$bg-grey: #F6F6F6;
-$color-test1:#DC6EDA;
-$color-test2: #A85DDC;
+$color-tertiary: #99e2d0;
+$color-white: #ffffff;
+$bg-grey: #f6f6f6;
+$color-test1: #dc6eda;
+$color-test2: #a85ddc;
 
 /** Elements **/
-$header-color:#101010;
+$header-color: #101010;
 $text-color: #000000;
 $heart-color: #404040;
-$location-color:#353535;
-$span-new-bg: #99E2D0;
-$span-new-color: #377E56;
+$location-color: #353535;
+$span-new-bg: #99e2d0;
+$span-new-color: #377e56;
 
 /** Layouts **/
-$location-bg: #EAEAEA;
+$location-bg: #eaeaea;
 $footer-bg: #353535;
-$footer-color:#FAFAFA;
-$resto-bg:#F6F6F6;
-$operation-hover: transparentize($color-primary, .85);
+$footer-color: #fafafa;
+$resto-bg: #f6f6f6;
+$operation-hover: transparentize($color-primary, 0.85);
 
 /** measuring scale **/
 $size: 1rem;
 
 /** Bootstraps **/
 $sizing: (
-    low: $size,
-    regular: $size * 2,
-    high: $size * 4,
+  low: $size,
+  regular: $size * 2,
+  high: $size * 4,
 );
 /** Box-shadow **/
-$heading-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.5);
+$heading-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 $btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 $card-shadow: 2px 4px 8px 3px rgb(228, 228, 231);
-
 
 /** Spacing **/
 $header-padding: 2rem;
 $layout-padding: 2rem 2rem 4rem 2rem;
 $layout-page-menu-padding: 4rem 2rem;
 $location-padding: 2rem;
-
-
-
