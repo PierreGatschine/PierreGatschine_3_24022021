@@ -20,6 +20,7 @@ $color-test2: #a85ddc; */
 /** Animations **/
 /* @use "sass:map"; */
 /** @format */
+/** Animation au chargement de la HomePage **/
 .loader {
   z-index: 3;
   opacity: 1;
@@ -298,8 +299,8 @@ a {
 @media all and (max-width: 450px) {
   .header__arrow {
     font-size: 1.1rem;
-    -webkit-transition: 2s;
-    transition: 2s;
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s;
   }
 }
 
@@ -766,8 +767,6 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  /* width: $unsize;
-  height: $unsize; */
   height: 4rem;
   width: 4rem;
   border: transparent 0px solid;
@@ -1007,8 +1006,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* width: $unsize;
-  height: $unsize; */
   height: 4rem;
   width: 4rem;
   border: transparent 0px solid;
@@ -1081,6 +1078,7 @@ a {
   margin-bottom: 3.5rem;
 }
 
+/** Animation carte menu **/
 .menu__starter {
   grid-area: starter;
   -webkit-animation: appearance 1s both ease-in-out;
@@ -1131,6 +1129,7 @@ a {
   }
 }
 
+/** Animation carte menu - end ! **/
 .menu__choice {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -188,7 +188,7 @@ a {
   transform: scale(1);
 }
 .btn:hover {
-  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  background: linear-gradient(15deg, #975ede, #ff99e2);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   transition-duration: 2s;
   transform: scale(1.01);
@@ -287,7 +287,7 @@ a {
   color: #ffffff;
 }
 .hero__btn:hover {
-  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  background: linear-gradient(15deg, #975ede, #ff99e2);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   transition-duration: 2s;
   transform: scale(1.01);
@@ -851,7 +851,7 @@ a {
   cursor: pointer;
 }
 .wrapper__btn--order:hover {
-  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  background: linear-gradient(15deg, #975ede, #ff99e2);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   transition-duration: 2s;
   transform: scale(1.01);
