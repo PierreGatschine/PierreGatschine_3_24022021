@@ -1,5 +1,68 @@
 /** @format */
 
+/** Colors **/
+@mixin linear-gradient($color1: $color-test1, $color2: $color-test2) {
+  colo: -webkit-linear-gradient($color1, $color2);
+  color: -moz-linear-gradient($color1, $color2);
+  transition: 2.5s;
+}
+
+@mixin heart-lighten($color: $color-secondary) {
+  color: lighten($color, 4);
+  transform: scaleX(1.2);
+  transform: translateY(0%);
+  transition-duration: 2s 1s ease-in-out;
+}
+
+/** Layouts **/
+@mixin grid(
+  $grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)),
+  $grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)),
+  $grid-gap: #{map-get($sizing, low) * 2}
+) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-template-rows: $grid-template-rows;
+  grid-gap: $grid-gap;
+}
+
+@mixin flexbox(
+  $flex-direction: row,
+  $justify-content: space-between,
+  $align-items: center,
+  $align-content: space-around
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content: $align-content;
+}
+
+/** Bootstraps **/
+@mixin dimension($dimension: $size) {
+  height: $dimension;
+  width: $dimension;
+}
+
+@mixin padding-layout {
+  padding: map-get($sizing, regular);
+  padding-bottom: map-get($sizing, high);
+}
+
+@mixin padding-resto {
+  padding-right: map-get($sizing, low) * 0.3;
+  @include padding-layout;
+}
+
+@mixin step-layout {
+  padding-top: map-get($sizing, regular);
+  padding-right: map-get($sizing, high);
+  padding-bottom: map-get($sizing, regular);
+  padding-left: map-get($sizing, high);
+}
+
+/** Eléments **/
 @mixin a {
   text-decoration: none;
   color: $color-white;
@@ -27,72 +90,7 @@
   line-height: $lh;
 }
 
-@mixin text-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@mixin linear-gradient($color1: $color-test1, $color2: $color-test2) {
-  colo: -webkit-linear-gradient($color1, $color2);
-  color: -moz-linear-gradient($color1, $color2);
-  transition: 2.5s;
-}
-
-@mixin heart-lighten($color1: $color-secondary) {
-  color: lighten($color1, 4);
-  transform: scaleX(1.2);
-  transform: translateY(0%);
-  transition: transform 2s ease-in-out;
-}
-
-/** Bootstraps **/
-@mixin dimension($dimension: $size) {
-  height: $dimension;
-  width: $dimension;
-}
-
-@mixin padding-layout {
-  padding: map-get($sizing, regular);
-  padding-bottom: map-get($sizing, high);
-}
-
-@mixin padding-resto {
-  padding-right: map-get($sizing, low) * 0.3;
-  @include padding-layout;
-}
-
-@mixin step-layout {
-  padding-top: map-get($sizing, regular);
-  padding-right: map-get($sizing, high);
-  padding-bottom: map-get($sizing, regular);
-  padding-left: map-get($sizing, high);
-}
-
-@mixin grid(
-  $grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)),
-  $grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)),
-  $grid-gap: #{map-get($sizing, low) * 2}
-) {
-  display: grid;
-  grid-template-columns: $grid-template-columns;
-  grid-template-rows: $grid-template-rows;
-  grid-gap: $grid-gap;
-}
-
-@mixin flexbox(
-  $flex-direction: row,
-  $justify-content: space-between,
-  $align-items: center,
-  $align-content: space-around
-) {
-  display: flex;
-  flex-direction: $flex-direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
-  align-content: $align-content;
-}
-
-/** Component **/
+/** Components **/
 @mixin btn(
   $color1: $color-primary,
   $color2: $color-secondary,
@@ -112,7 +110,7 @@
   &:hover {
     background: linear-gradient(15deg, $color1 -5%, $color2 100%);
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
-    transition: transform 2s;
+    transition-duration: 2s;
     transform: scale(1.01);
   }
 }
@@ -120,21 +118,20 @@
 @mixin heart(
   $justify-content: end,
   $color: $color-white,
-  $unsize: map-get($sizing, low) * 4,
+  $unsize: map-get($sizing, high),
   $padding: map-get($sizing, low)
 ) {
   display: flex;
   align-items: center;
   justify-content: $justify-content;
-  width: $unsize;
-  height: $unsize;
+  @include dimension($unsize);
   border: transparent 0px solid;
   padding: map-get($sizing, low);
   cursor: pointer;
   position: relative;
   background: $color;
   transform: translateY(0%);
-  transition: transform 2s;
+  transition-duration: 2s;
 }
 
 @mixin heart-hover(
@@ -161,11 +158,18 @@
   transform: scale(1);
   transition: all 4s;
   transform: translateY(5px);
-  transition: transform 2s ease-in-out;
+  transition-duration: 2s 500ms ease-in-out;
   overflow: hidden;
   &:hover {
     font-weight: bold;
     color: $color-primary;
     @include heart-lighten;
   }
+}
+
+/** Animations **/
+@mixin text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

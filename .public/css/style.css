@@ -1,18 +1,22 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
-/**
- * Colors *
- *
- * @format
- */
+/** @format */
+/** Colors **/
+/* $color-test1: #dc6eda;
+$color-test2: #a85ddc; */
 /** Elements **/
 /** Layouts **/
 /** measuring scale **/
 /** Bootstraps **/
 /** Box-shadow **/
-/** Spacing **/
 /** @format */
+/** Colors **/
+/** Layouts **/
 /** Bootstraps **/
-/** Component **/
+/** Eléments **/
+/** Components **/
+/** Animations **/
+/* @use "sass:map"; */
 /** @format */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
 .loader {
@@ -185,7 +189,7 @@ a {
 .btn:hover {
   background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
-  transition: transform 2s;
+  transition-duration: 2s;
   transform: scale(1.01);
 }
 
@@ -209,7 +213,7 @@ a {
   font-size: 2rem;
   color: #000000;
 }
-@media (max-width: 400px) {
+@media all and (max-width: 450px) {
   .header__arrow {
     font-size: 1.1rem;
     transition: 2s;
@@ -284,7 +288,7 @@ a {
 .hero__btn:hover {
   background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
-  transition: transform 2s;
+  transition-duration: 2s;
   transform: scale(1.01);
 }
 @media all and (min-width: 1400px) {
@@ -310,7 +314,7 @@ a {
   color: #ff8edf;
   transform: scaleX(1.2);
   transform: translateY(0%);
-  transition: transform 2s ease-in-out;
+  transition-duration: 2s 1s ease-in-out;
 }
 .footer__icons {
   width: 1.1rem;
@@ -499,15 +503,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: end;
-  width: 4rem;
   height: 4rem;
+  width: 4rem;
   border: transparent 0px solid;
   padding: 1rem;
   cursor: pointer;
   position: relative;
   background: #ffffff;
   transform: translateY(0%);
-  transition: transform 2s;
+  transition-duration: 2s;
 }
 .restaurant .figcaption__card--like {
   display: flex;
@@ -528,7 +532,7 @@ a {
   transform: scale(1);
   transition: all 4s;
   transform: translateY(5px);
-  transition: transform 2s ease-in-out;
+  transition-duration: 2s 500ms ease-in-out;
   overflow: hidden;
 }
 .restaurant .figcaption__card--like:hover {
@@ -537,7 +541,7 @@ a {
   color: #ff8edf;
   transform: scaleX(1.2);
   transform: translateY(0%);
-  transition: transform 2s ease-in-out;
+  transition-duration: 2s 1s ease-in-out;
 }
 
 /** @format */
@@ -661,15 +665,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
   height: 4rem;
+  width: 4rem;
   border: transparent 0px solid;
   padding: 1rem;
   cursor: pointer;
   position: relative;
   background: #f6f6f6;
   transform: translateY(0%);
-  transition: transform 2s;
+  transition-duration: 2s;
 }
 @media all and (min-width: 1400px) {
   .resto__menu--btn {
@@ -695,7 +699,7 @@ a {
   transform: scale(1);
   transition: all 4s;
   transform: translateY(5px);
-  transition: transform 2s ease-in-out;
+  transition-duration: 2s 500ms ease-in-out;
   overflow: hidden;
   padding-right: 1.7rem;
 }
@@ -705,7 +709,7 @@ a {
   color: #ff8edf;
   transform: scaleX(1.2);
   transform: translateY(0%);
-  transition: transform 2s ease-in-out;
+  transition-duration: 2s 1s ease-in-out;
 }
 
 .menu__starter,
@@ -846,7 +850,7 @@ a {
 .wrapper__btn--order:hover {
   background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
-  transition: transform 2s;
+  transition-duration: 2s;
   transform: scale(1.01);
 }
 @media all and (min-width: 750px) {

@@ -1,16 +1,13 @@
-/**
- * Colors *
- *
- * @format
- */
+/** @format */
 
+/** Colors **/
 $color-primary: #9256dc;
 $color-secondary: #ff7ad9;
 $color-tertiary: #99e2d0;
 $color-white: #ffffff;
 $bg-grey: #f6f6f6;
-$color-test1: #dc6eda;
-$color-test2: #a85ddc;
+/* $color-test1: #dc6eda;
+$color-test2: #a85ddc; */
 
 /** Elements **/
 $header-color: #101010;
@@ -36,13 +33,8 @@ $sizing: (
   regular: $size * 2,
   high: $size * 4,
 );
+
 /** Box-shadow **/
 $heading-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 $btn-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 $card-shadow: 2px 4px 8px 3px rgb(228, 228, 231);
-
-/** Spacing **/
-$header-padding: 2rem;
-$layout-padding: 2rem 2rem 4rem 2rem;
-$layout-page-menu-padding: 4rem 2rem;
-$location-padding: 2rem;

@@ -1,4 +1,4 @@
-@use "sass:map";
+/* @use "sass:map"; */
 
 $breakpoints:(
     mobile: 450px,
@@ -6,6 +6,13 @@ $breakpoints:(
     desktop: 1024px,
     tv: 1400px
 );
+
+@mixin mobile-only {
+    @media all and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    };
+}
+
 @mixin mobile {
     @media all and (min-width: map-get($breakpoints, mobile)){
         @content;
