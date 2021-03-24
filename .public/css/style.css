@@ -18,6 +18,7 @@ $color-test2: #a85ddc; */
 /** Animations **/
 /* @use "sass:map"; */
 /** @format */
+/** Animation au chargement de la HomePage **/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&family=Shrikhand&display=swap");
 .loader {
   z-index: 3;
@@ -216,7 +217,7 @@ a {
 @media all and (max-width: 450px) {
   .header__arrow {
     font-size: 1.1rem;
-    transition: 2s;
+    transition-duration: 2s;
   }
 }
 
@@ -717,6 +718,7 @@ a {
   margin-bottom: 3.5rem;
 }
 
+/** Animation carte menu **/
 .menu__starter {
   grid-area: starter;
   animation: appearance 1s both ease-in-out;
@@ -747,6 +749,7 @@ a {
     transform: translateY(0);
   }
 }
+/** Animation carte menu - end ! **/
 .menu__choice {
   display: flex;
   background: #ffffff;

@@ -20,6 +20,7 @@
     }
   }
 }
+
 .hero__page_menu {
   &--img {
     height: 50vh;
@@ -104,11 +105,12 @@
     }
   }
 }
+
 .menu__starter,
 .menu__middle {
   margin-bottom: map-get($sizing, low) * 3.5;
 }
-
+/** Animation carte menu **/
 .menu__starter {
   grid-area: starter;
   animation: appearance 1s both ease-in-out;
@@ -140,6 +142,7 @@
     transform: translateY(0);
   }
 }
+/** Animation carte menu - end ! **/
 
 .menu__choice {
   display: flex;
