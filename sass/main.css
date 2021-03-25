@@ -253,7 +253,7 @@ a {
 }
 
 .btn:hover {
-  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  background: linear-gradient(15deg, #975ede, #ff99e2);
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   -webkit-transition-duration: 2s;
@@ -410,7 +410,7 @@ a {
 }
 
 .hero__btn:hover {
-  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  background: linear-gradient(15deg, #975ede, #ff99e2);
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   -webkit-transition-duration: 2s;
@@ -1298,7 +1298,7 @@ a {
 }
 
 .wrapper__btn--order:hover {
-  background: linear-gradient(15deg, #9256dc -5%, #ff7ad9 100%);
+  background: linear-gradient(15deg, #975ede, #ff99e2);
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.7);
   -webkit-transition-duration: 2s;
